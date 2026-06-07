@@ -2,7 +2,8 @@
 Owner: EErov
 ---
 # 1. 
-	![](image.png)
+![](attachments/image.png)
+![](attachments/image1.png)
 # 2.
 
 ![[image 2.png]]

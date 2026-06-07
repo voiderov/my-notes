@@ -73,8 +73,19 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
+          },
+          {
+            "id": "2a4b8fc836b1e0b6",
+            "type": "leaf",
+            "state": {
+              "type": "mk-path-view",
+              "state": {},
+              "icon": "layout-grid",
+              "title": "Navigator"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -244,11 +255,14 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "e8fd5a35217eac2c",
+  "active": "2a4b8fc836b1e0b6",
   "lastOpenFiles": [
-    "attachments/image.png",
-    "attachments/image 1.png",
     "My Notes/OSN Jawab.md",
+    "Pasted image 20260607205939.png",
+    "Tags",
+    "attachments/image.md",
+    "attachments/image.png",
+    "attachments/image1.png",
     "attachments/image 2.png",
     "attachments/image 3.png",
     "attachments/image 4.png",
@@ -257,7 +271,6 @@
     "attachments/image 6.png",
     "attachments/image 7.png",
     "attachments/image 8.png",
-    "attachments/image 9.png",
     "attachments",
     "OSNK2025.pdf",
     "My Notes",
