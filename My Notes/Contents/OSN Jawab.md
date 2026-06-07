@@ -6,8 +6,7 @@ Owner: EErov
 ![](/My%20Notes/Contents/attachments/image1.png)
 # 2.
 
-![[image 2.png]]
-
+![](/My%20Notes/Contents/attachments/image%202.png)
 D
 
 ## Operations
@@ -42,15 +41,15 @@ its D (49-32=17)
 
 # 3.
 
-![[image 3.png]]
+![](/My%20Notes/Contents/attachments/image%203.png)
 
-![[image 4.png]]
+![![](/My%20Notes/Contents/attachments/image%204.png)]
 
 8, 4 currently shown we can multiply this one block ahead
 
 # 4.
 
-![[image 5.png]]
+![](/My%20Notes/Contents/attachments/image%205.png)
 
 The optimal sequence of refueling stops is:
 
@@ -68,7 +67,7 @@ The minimum number of times Pak Dengklek must stop to refuel is **4**.
 
 # 5.
 
-![[image 6.png]]
+![](/My%20Notes/Contents/attachments/image%206.png)
 
 ## We know
 
@@ -119,7 +118,7 @@ simply remove
 
 # 6.
 
-![[image 7.png]]
+![](/My%20Notes/Contents/attachments/image%207.png)
 
 ## Binary Search
 
@@ -187,15 +186,15 @@ The duck holding the coin is **number 44**.
 
 # 7.
 
-![[image 8.png]]
+![](/My%20Notes/Contents/attachments/image%208.png)
 
 ## Solution
 
-![[image 9.png]]
+![](/My%20Notes/Contents/attachments/image%209.png)
 
 # 8.
 
-![[image 10.png]]
+![](/My%20Notes/Contents/attachments/image%2010.png)
 
 ## We Know
 
