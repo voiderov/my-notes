@@ -2,8 +2,8 @@
 Owner: EErov
 ---
 # 1. 
-![](attachments/image.png)
-![](attachments/image1.png)
+![](/My%20Notes/Contents/attachments/image.png)
+![](/My%20Notes/Contents/attachments/image1.png)
 # 2.
 
 ![[image 2.png]]
