@@ -1,0 +1,18 @@
+# Table of contents
+
+* [.trash](README.md)
+  * [Welcome](<My Notes/.trash/Welcome.md>)
+  * [image](<My Notes/.trash/image.md>)
+  * [Trials](.trash/trials/README.md)
+    * [OSNK2025](<My Notes/.trash/Trials/OSNK2025.md>)
+* [Contents](contents/README.md)
+  * [OSN Jawab](<My Notes/Contents/OSN Jawab.md>)
+* [.obsidian](.obsidian/README.md)
+  * [plugins](.obsidian/plugins/README.md)
+    * [obsidian-advanced-slides](.obsidian/plugins/obsidian-advanced-slides/README.md)
+      * [plugin](.obsidian/plugins/obsidian-advanced-slides/plugin/README.md)
+        * [Chalkboard](<My Notes/.obsidian/plugins/obsidian-advanced-slides/plugin/chalkboard/README.md>)
+        * [Chart](<My Notes/.obsidian/plugins/obsidian-advanced-slides/plugin/chart/README.md>)
+        * [Custom controls](<My Notes/.obsidian/plugins/obsidian-advanced-slides/plugin/customcontrols/README.md>)
+        * [reveal.js-menu](<My Notes/.obsidian/plugins/obsidian-advanced-slides/plugin/menu/README.md>)
+          * [Contributing](<My Notes/.obsidian/plugins/obsidian-advanced-slides/plugin/menu/CONTRIBUTING.md>)
