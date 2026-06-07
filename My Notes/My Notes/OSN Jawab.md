@@ -1,10 +1,8 @@
 ---
 Owner: EErov
 ---
-![[OSNK2025.pdf]]
-
 # 1. 
-![](image.png)
+	![](image.png)
 # 2.
 
 ![[image 2.png]]
