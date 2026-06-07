@@ -13,7 +13,6 @@
   "templater-obsidian",
   "tag-wrangler",
   "obsidian-style-settings",
-  "smart-connections",
   "quickadd",
   "remotely-save",
   "obsidian-outliner",
@@ -21,5 +20,6 @@
   "obsidian-minimal-settings",
   "obsidian-mind-map",
   "obsidian-linter",
-  "obsidian-importer"
+  "obsidian-importer",
+  "obsidian-pandoc"
 ]
