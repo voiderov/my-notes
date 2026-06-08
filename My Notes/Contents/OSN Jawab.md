@@ -15,12 +15,12 @@ Owner: Erov
 
 #### Phase 1: Identify
 
-**Input → 10+15+47+6+x = 78**\
+**Input → 10+15+47+6+x = 78**
 **Output → 23+15+38+19+y = 95**
 
-_or simply_\
-&#xNAN;_&#x49;nput → 10+47+6+x_\
-&#xNAN;_&#x4F;utput → 23+38+19+y_
+_or simply_
+Input → 10+47+6+x
+Output → 23+38+19+y
 
 > we can optionally eliminate 15, since the input and output is already stabilized, this help reducing the amount of numbers we need to play with
 
@@ -38,7 +38,7 @@ its D (49-32=17)
 
 #### Phase 3: Confirm
 
-**Input → 10+15+47+6+x = 78**\
+**Input → 10+15+47+6+x = 78**
 **Output → 23+15+38+19+y = 95**
 
 ## 3.
@@ -61,8 +61,6 @@ The optimal sequence of refueling stops is:
 4. **Station 10** (at 1550 km)
 
 The minimum number of times Pak Dengklek must stop to refuel is **4**.
-
-4
 
 ## 5.
 
