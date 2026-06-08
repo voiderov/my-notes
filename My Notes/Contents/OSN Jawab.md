@@ -1,9 +1,15 @@
 ---
-Owner: EErov
+Owner: Erov
 ---
 
+# 1
+
+![](/My%20Notes/Contents/attachments/image.png)
+![](/My%20Notes/Contents/attachments/image1.png)
+
+# 2
+
 ![](/My%20Notes/Contents/attachments/image%202.png)
-D
 
 ### Operations
 
