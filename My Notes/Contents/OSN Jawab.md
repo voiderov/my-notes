@@ -2,20 +2,7 @@
 Owner: EErov
 ---
 
-<<<<<<< HEAD
 ![](/My%20Notes/Contents/attachments/image%202.png)
-=======
-# OSN Jawab
-
-## 1.
-
-![](../../.gitbook/assets/image.png) ![](../../.gitbook/assets/image1.png)
-
-## 2.
-
-!\[\[image 2.png]]
-
->>>>>>> refs/remotes/origin/main
 D
 
 ### Operations
@@ -50,25 +37,15 @@ its D (49-32=17)
 
 ## 3.
 
-<<<<<<< HEAD
 ![](/My%20Notes/Contents/attachments/image%203.png)
 
 ![![](/My%20Notes/Contents/attachments/image%204.png)]
-=======
-!\[\[image 3.png]]
-
-!\[\[image 4.png]]
->>>>>>> refs/remotes/origin/main
 
 8, 4 currently shown we can multiply this one block ahead
 
 ## 4.
 
-<<<<<<< HEAD
 ![](/My%20Notes/Contents/attachments/image%205.png)
-=======
-!\[\[image 5.png]]
->>>>>>> refs/remotes/origin/main
 
 The optimal sequence of refueling stops is:
 
@@ -83,11 +60,7 @@ The minimum number of times Pak Dengklek must stop to refuel is **4**.
 
 ## 5.
 
-<<<<<<< HEAD
 ![](/My%20Notes/Contents/attachments/image%206.png)
-=======
-!\[\[image 6.png]]
->>>>>>> refs/remotes/origin/main
 
 ### We know
 
@@ -133,11 +106,7 @@ simply remove
 
 ## 6.
 
-<<<<<<< HEAD
 ![](/My%20Notes/Contents/attachments/image%207.png)
-=======
-!\[\[image 7.png]]
->>>>>>> refs/remotes/origin/main
 
 ### Binary Search
 
@@ -176,27 +145,15 @@ The duck holding the coin is **number 44**.
 
 ## 7.
 
-<<<<<<< HEAD
 ![](/My%20Notes/Contents/attachments/image%208.png)
-=======
-!\[\[image 8.png]]
->>>>>>> refs/remotes/origin/main
 
 ### Solution
 
-<<<<<<< HEAD
 ![](/My%20Notes/Contents/attachments/image%209.png)
-=======
-!\[\[image 9.png]]
->>>>>>> refs/remotes/origin/main
 
 ## 8.
 
-<<<<<<< HEAD
 ![](/My%20Notes/Contents/attachments/image%2010.png)
-=======
-!\[\[image 10.png]]
->>>>>>> refs/remotes/origin/main
 
 ### We Know
 
