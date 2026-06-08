@@ -265,11 +265,10 @@ Applications:
 
 $\[2, 3, 4, 5, 1]$ → $\[5, 4, 3, 1, 2]$$[5, 4, 3, 1, 2]$ → $[1, 3, 4, 2, 5]$$\[1, 3, 4, 2, 5]$ → $\[2, 4, 3, 5, 1]$ (C)
 
-!\[\[image 11.png]]
-
+![](/My%20Notes/Contents/attachments/image%2011.png)
 ## 9.
 
-!\[\[image 12.png]]
+![](/My%20Notes/Contents/attachments/image%2012.png)
 
 ### Sequences:
 
@@ -282,7 +281,7 @@ $\[2, 3, 4, 5, 1]$ → $\[5, 4, 3, 1, 2]$$[5, 4, 3, 1, 2]$ → $[1, 3, 4, 2, 5]$
 
 ## 10.
 
-!\[\[image 13.png]]
+![](/My%20Notes/Contents/attachments/image%2013.png)
 
 C(7 eggs, 2 golden) = $\frac{7!}{2!(7 - 2)!} = \frac{7!}{2! \times 5!}$ = 21
 
@@ -294,9 +293,9 @@ Jadi 5 kali percobaan.
 
 ## 11 -13.
 
-!\[\[image 14.png]]
+![](/My%20Notes/Contents/attachments/image%2014.png)
 
-!\[\[image 15.png]]
+![](/My%20Notes/Contents/attachments/image%2015.png)
 
 ### Number 11
 
@@ -358,31 +357,31 @@ Possible.
 
 ## 14.
 
-!\[\[image 16.png]]
+![](/My%20Notes/Contents/attachments/image%2016.png)
 
-!\[\[image 17.png]]
+![](/My%20Notes/Contents/attachments/image%2017.png)
 
 Total = 60 routes.
 
 ## 15-16.
 
-!\[\[image 18.png]]
+![](/My%20Notes/Contents/attachments/image%2018.png)
 
 ### 15.
 
-!\[\[image 19.png]]
+![](/My%20Notes/Contents/attachments/image%2019.png)
 
 Total = 114 routes.
 
 ### 16.
 
-!\[\[image 20.png]]
+![](/My%20Notes/Contents/attachments/image%2020.png)
 
 Total = 78 routes.
 
 ## 17.
 
-!\[\[image 21.png]]
+![](/My%20Notes/Contents/attachments/image%2021.png)
 
 #### Penjelasan:
 
@@ -404,13 +403,13 @@ Semua 10 kotak tercakup, dan hanya **3 kotak** yang terlihat dari luar.
 
 ### 18.
 
-!\[\[image 22.png]]
+![](/My%20Notes/Contents/attachments/image%2022.png)
 
 Benar/True
 
 ### 19.
 
-!\[\[image 23.png]]
+![](/My%20Notes/Contents/attachments/image%2023.png)
 
 #### Penjelasan Singkat:
 
@@ -433,7 +432,7 @@ Jadi, walaupun total ada 70 kotak, jumlah kotak yang terlihat dari luar **paling
 
 ## 20-22.
 
-!\[\[image 24.png]]
+![](/My%20Notes/Contents/attachments/image%2024.png)
 
 #### Pemodelan Umum
 
@@ -555,17 +554,17 @@ Setelah analisis lengkap, huruf yang paling banyak muncul adalah:
 
 ## Soal 23-25.
 
-!\[\[image 25.png]]
+![](/My%20Notes/Contents/attachments/image%2025.png)
 
 ### 23.
 
-!\[\[image 26.png]]
+![](/My%20Notes/Contents/attachments/image%2026.png)
 
 4 bebek
 
 ### 24.
 
-!\[\[image 27.png]]
+![](/My%20Notes/Contents/attachments/image%2027.png)
 
 ### Solution for Soal 24 (X=9, Y=21, N=1000)
 
@@ -622,7 +621,7 @@ Non-multiples of 3 from 1 to 1000: 1000 - 333 = **667**
 
 ### 25.
 
-!\[\[image 28.png]]
+![](/My%20Notes/Contents/attachments/image%2028.png)
 
 ### Soal 25: X=3, Y=100, N=10^16
 
@@ -718,7 +717,7 @@ Check that the reduced Frobenius number is less than N/d so all values are in ra
 
 ## 26-28.
 
-!\[\[image 29.png]]
+![](/My%20Notes/Contents/attachments/image%2029.png)
 
 ### 26.
 
@@ -736,7 +735,7 @@ Comparing the values 1, 3, 1, 7, and 1, the largest return value is 7, which com
 
 ### 27.
 
-!\[\[image 30.png]]
+![](/My%20Notes/Contents/attachments/image%2030.png)
 
 Bottom-up table (key values)
 
@@ -772,7 +771,7 @@ Therefore, the problem reduces to counting how many integers from 1 to 2025 are 
 
 ### 28.
 
-!\[\[image 31.png]]
+![](/My%20Notes/Contents/attachments/image%2031.png)
 
 #### Fase 1
 
@@ -858,7 +857,7 @@ Deret geometri tak hingga merupakan penjumlahan suku-suku geometri yang banyakny
 
 ## 29.
 
-!\[\[image 32.png]]
+![](/My%20Notes/Contents/attachments/image%2032.png)
 
 #### Memahami Objek `vector` di C++
 
@@ -916,7 +915,7 @@ for (int i = 0; i < N; i++) {
 
 ### 30.
 
-!\[\[image 33.png]]
+![](/My%20Notes/Contents/attachments/image%2033.png)
 
 * B\[0] = 0
 * B\[1] = B\[0] + A\[0] = 0 + 1 = 1
@@ -947,7 +946,7 @@ Melalui perbandingan hasil kalkulasi di atas, nilai kembalian terbesar adalah 10
 
 ## 31.
 
-!\[\[image 34.png]]
+![](/My%20Notes/Contents/attachments/image%2034.png)
 
 The program consists of two main functions: `GSI` and `FUN`.
 
@@ -1014,7 +1013,7 @@ No other combination of indices produces a higher difference.
 
 ## 32-34.
 
-!\[\[image 35.png]]
+![](/My%20Notes/Contents/attachments/image%2035.png)
 
 #### Function Breakdown
 
@@ -1109,7 +1108,7 @@ Fungsi `return P;` akan mengembalikan angka **3**. Hal ini terbukti benar karena
 
 ### 32.
 
-!\[\[image 36.png]]
+![](/My%20Notes/Contents/attachments/image%2036.png)
 
 Sebagai acuan dasar:
 
@@ -1203,7 +1202,7 @@ Setelah indeks `i = 11` selesai diproses, kondisi perulangan luar `i <= N - M` (
 
 ### 33.
 
-!\[\[image 37.png]]
+![](/My%20Notes/Contents/attachments/image%2037.png)
 
 Berikut adalah penelusuran (_tracing_) secara rinci untuk setiap iterasi dari `i = 0` sampai `i = 11` pada Soal 32.
 
