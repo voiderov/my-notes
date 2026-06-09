@@ -114,10 +114,10 @@ simply remove
 
 ### Binary Search
 
-**Initial Range:** $\[1, 255]$
+**Initial Range:** $[1, 255]$
 
 1. **Question 1:**
-   * $M = (1 + 255) / 2 = 128$.
+   -  $M = (1 + 255) / 2 = 128$.
    * Response: "Barat" (West).
    * The coin is to the West of duck 128. New range: $\[1, 127]$.
 2. **Question 2:**
@@ -181,7 +181,7 @@ For C cycles:
 * C⁴: **\[5, 1, 2, 3, 4]**
 * **C⁵: \[1, 2, 3, 4, 5]** ← reset!
 
-2026 % 5 = 1, $C^1$ = \[2, 3, 4, 5, 1]
+2026 % 5 = 1, $C^1$ = [2, 3, 4, 5, 1]
 
 For BA Function:
 
@@ -199,15 +199,15 @@ Find Cycles:
 
 1st Cycle:
 
-pos1 → pos5\
-pos5 → pos4\
+pos1 → pos5
+pos5 → pos4
 pos4 → pos1
 
 3 cycle.
 
 2nd Cycle:
 
-pos2 → pos3\
+pos2 → pos3
 pos3→ pos2
 
 2 cycle.

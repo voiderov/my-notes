@@ -95,8 +95,8 @@
               "type": "backlink",
               "state": {
                 "file": "My Notes/Contents/OSN Jawab.md",
-                "collapseAll": false,
-                "extraContext": false,
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -165,12 +165,12 @@
               "title": "Outline of OSN Jawab"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,8 +183,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "0fd1a60d302cc061",
+  "active": "bade4e5fa3d44fe5",
   "lastOpenFiles": [
+    "SUMMARY.md",
+    "My Notes/Contents/OSN Jawab.md",
+    "README.md",
     "contents/README.md"
   ]
 }
