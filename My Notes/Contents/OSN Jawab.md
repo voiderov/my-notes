@@ -406,11 +406,7 @@ Jadi, walaupun total ada 70 kotak, jumlah kotak yang terlihat dari luar **paling
 
 ![](<../../.gitbook/assets/image 24.png>)
 
-**Pemodelan Umum**
 
-### Soal 20-22: Kartu Huruf Ajaib
-
-#### Memahami Masalah
 
 Pak Dengklek punya **26 kartu** berisi huruf A-Z (kartu ke-i berisi huruf ke-i).
 
@@ -424,7 +420,7 @@ N→M, O→P, P→T, Q→P, R→Q, S→Q, T→U, U→V, V→W, W→X, X→T, Y�
 
 ***
 
-#### Soal 20 — Kartu ke-10 setelah 33 sentikan
+### 20
 
 Kartu ke-10 awalnya berisi huruf **J**.
 
@@ -449,7 +445,7 @@ Sisa sentikan setelah langkah ke-2: 33 - 2 = 31 langkah dalam siklus F→H→I\
 
 ***
 
-#### Soal 21 — Berapa huruf berbeda setelah 3333 sentikan?
+### 21
 
 Setelah banyak sentikan, setiap huruf akan masuk ke **siklus tertentu**. Kita cari ke mana setiap huruf akhirnya bermuara:
 
