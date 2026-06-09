@@ -1,30 +1,30 @@
 ---
 Owner: Erov
-description: Unsere Panzerdivision
-icon: '0'
 ---
 
-# OSN Jawab
+# 1
 
-## 1
+![](/My%20Notes/Contents/attachments/image.png)
+![](/My%20Notes/Contents/attachments/image1.png)
 
-![](<../../.gitbook/assets/image (1).png>) ![](<../../.gitbook/assets/image1 (1).png>)
+# 2
 
-## 2
+![](/My%20Notes/Contents/attachments/image%202.png)
 
-![](<../../.gitbook/assets/image 2.png>)
+### Operations
 
-#### Operations
+#### Phase 1: Identify
 
-**Phase 1: Identify**
+**Input → 10+15+47+6+x = 78**
+**Output → 23+15+38+19+y = 95**
 
-**Input → 10+15+47+6+x = 78** **Output → 23+15+38+19+y = 95**
-
-_or simply_ Input → 10+47+6+x Output → 23+38+19+y
+_or simply_
+Input → 10+47+6+x
+Output → 23+38+19+y
 
 > we can optionally eliminate 15, since the input and output is already stabilized, this help reducing the amount of numbers we need to play with
 
-**Phase 2: Connects**
+#### Phase 2: Connects
 
 > Be logical, there is more duck outside than inside (out more than in)
 
@@ -36,21 +36,22 @@ Since we arent told how many ducks are there yet. Yet another simply, just choos
 
 its D (49-32=17)
 
-**Phase 3: Confirm**
+#### Phase 3: Confirm
 
-**Input → 10+15+47+6+x = 78** **Output → 23+15+38+19+y = 95**
+**Input → 10+15+47+6+x = 78**
+**Output → 23+15+38+19+y = 95**
 
 ## 3.
 
-![](<../../.gitbook/assets/image 3.png>)
+![](/My%20Notes/Contents/attachments/image%203.png)
 
-!\[![](<../../.gitbook/assets/image 4.png>)]
+![![](/My%20Notes/Contents/attachments/image%204.png)]
 
-8 steps. Overall 4 starting position.
+8, 4 currently shown we can multiply this one block ahead
 
 ## 4.
 
-![](<../../.gitbook/assets/image 5.png>)
+![](/My%20Notes/Contents/attachments/image%205.png)
 
 The optimal sequence of refueling stops is:
 
@@ -63,9 +64,9 @@ The minimum number of times Pak Dengklek must stop to refuel is **4**.
 
 ## 5.
 
-![](<../../.gitbook/assets/image 6.png>)
+![](/My%20Notes/Contents/attachments/image%206.png)
 
-#### We know
+### We know
 
 1. Code can start from A-Z (26 letters) and 0-9 (10 numbers)
 2. We have rules:
@@ -73,33 +74,33 @@ The minimum number of times Pak Dengklek must stop to refuel is **4**.
    2. Rule b: 1-3 numbers, followed by 0-2 letters
 3. Absolutely no duplicates
 
-#### Operations
+### Operations
 
-**Phase 1: Identify rule 1**
+#### Phase 1: Identify rule 1
 
 From this amount of data we can try to find how much possibilities exist:
 
 **Iteration 1: 0-2 of 26 letters (A-Z) & 1-3 of 10 numbers (0-9)**
 
-$$26^0 + 26^1 + 26^2 = 703 \space chars$$
+$26^0$ + $26^1$ + $26^2$ = 703 chars
 
-$$10^1 + 10^2 + 10^3 = 1110 \space nums$$
+$10^1 + 10^2 + 10^3$ = 1110 chars
 
-$$\text{Total for Rule 1} = (26^0 + 26^1 + 26^2) \times (10^1 + 10^2 + 10^3) = 703 \times 1110 = 780,330$$
+$\text{Total for Rule 1} = (26^0 + 26^1 + 26^2) \times (10^1 + 10^2 + 10^3) = 703 \times 1110 = 780,330$
 
 **Iteration 2: 1-3 of 10 numbers & 0-2 of 26 letters**
 
 Literally its just swapped Iteration 1, so:
 
-$$\text{Total for Rule 2} = (10^1 + 10^2 + 10^3) \times (26^0 + 26^1 + 26^2) = 1110 \times 703 = 780,330$$
+$\text{Total for Rule 2} = (10^1 + 10^2 + 10^3) \times (26^0 + 26^1 + 26^2) = 1110 \times 703 = 780,330$
 
 So total of possibilities is 1.560.660
 
-**Phase 2: Identify Dupes**
+#### Phase 2: Identify Dupes
 
 The must have for both sub-rules is numbers, so simply identify the dupes with:
 
-$$10^1 + 10^2 + 10^3$$ = 1110 chars
+$10^1 + 10^2 + 10^3$ = 1110 chars
 
 this is the dupes because it can satisfy both sub-rule a and b.
 
@@ -109,38 +110,38 @@ simply remove
 
 ## 6.
 
-![](<../../.gitbook/assets/image 7.png>)
+![](/My%20Notes/Contents/attachments/image%207.png)
 
-#### Binary Search
+### Binary Search
 
-**Initial Range:** \[1, 255]
+**Initial Range:** $[1, 255]$
 
 1. **Question 1:**
-   * M = (1 + 255) / 2 = 128.
+   -  $M = (1 + 255) / 2 = 128$.
    * Response: "Barat" (West).
-   * The coin is to the West of duck 128. New range: \[1, 127].
+   * The coin is to the West of duck 128. New range: $\[1, 127]$.
 2. **Question 2:**
-   * M = (1 + 127) / 2 = 64.
+   * $M = (1 + 127) / 2 = 64$.
    * Response: "Barat" (West).
-   * The coin is to the West of duck 64. New range: \[1, 63].
+   * The coin is to the West of duck 64. New range: $\[1, 63]$.
 3. **Question 3:**
-   * M = (1 + 63) / 2 = 32.
+   * $M = (1 + 63) / 2 = 32$.
    * Response: "Timur" (East).
-   * The coin is to the East of duck 32. New range: \[33, 63].
+   * The coin is to the East of duck 32. New range: $\[33, 63]$.
 4. **Question 4:**
-   * M = (33 + 63) / 2 = 48.
+   * $M = (33 + 63) / 2 = 48$.
    * Response: "Barat" (West).
-   * The coin is to the West of duck 48. New range: \[33, 47].
+   * The coin is to the West of duck 48. New range: $\[33, 47]$.
 5. **Question 5:**
-   * M = (33 + 47) / 2 = 40.
+   * $M = (33 + 47) / 2 = 40$.
    * Response: "Timur" (East).
-   * The coin is to the East of duck 40. New range: \[41, 47].
+   * The coin is to the East of duck 40. New range: $\[41, 47]$.
 6. **Question 6:**
-   * M = (41 + 47) / 2 = 44.
+   * $M = (41 + 47) / 2 = 44$.
    * Response: "Ketemu!" (Found).
    * The target is identified.
 
-**Conclusion**
+#### Conclusion
 
 Following the sequence of responses provided—"Barat", "Barat", "Timur", "Barat", "Timur", "Ketemu!"—the binary search algorithm successfully narrows down the search space to the single duck that was selected in the final step.
 
@@ -148,21 +149,21 @@ The duck holding the coin is **number 44**.
 
 ## 7.
 
-![](<../../.gitbook/assets/image 8.png>)
+![](/My%20Notes/Contents/attachments/image%208.png)
 
-#### Solution
+### Solution
 
-![](<../../.gitbook/assets/image 9.png>)
+![](/My%20Notes/Contents/attachments/image%209.png)
 
 ## 8.
 
-![](<../../.gitbook/assets/image 10.png>)
+![](/My%20Notes/Contents/attachments/image%2010.png)
 
-#### We Know
+### We Know
 
 5 Cards: with starting position of \[v, w, x, y, z] → \[1, 2, 3, 4, 5]
 
-**Rules:**
+#### Rules:
 
 * A → \[pos3, pos2, pos1, pos4, pos5]
 * B → \[pos4, pos1 , pos2, pos5, pos3]
@@ -180,7 +181,7 @@ For C cycles:
 * C⁴: **\[5, 1, 2, 3, 4]**
 * **C⁵: \[1, 2, 3, 4, 5]** ← reset!
 
-2026 % 5 = 1, C<sup>1</sup> = \[2, 3, 4, 5, 1]
+2026 % 5 = 1, $C^1$ = [2, 3, 4, 5, 1]
 
 For BA Function:
 
@@ -190,14 +191,16 @@ Function A → \[pos3, pos2, pos1, pos4, pos5]
 
 Function B → \[pos4, pos1 , pos2, pos5, pos3]
 
+Apply A → \[3, 2, 1, 4, 5]
+
+Apply B → \[4, 3, 2, 5, 1]
+
 Find Cycles:
 
 1st Cycle:
 
 pos1 → pos5
-
 pos5 → pos4
-
 pos4 → pos1
 
 3 cycle.
@@ -205,8 +208,7 @@ pos4 → pos1
 2nd Cycle:
 
 pos2 → pos3
-
-&#x20;pos3→ pos2
+pos3→ pos2
 
 2 cycle.
 
@@ -218,29 +220,18 @@ Applications:
 
 **Phase 1: C**
 
-\[1, 2, 3, 4, 5] → \[2, 3, 4, 5, 1]
+\[1, 2, 3, 4, 5] → $\[2, 3, 4, 5, 1]$
 
 **Phase 2: BA**
 
-$$[2, 3, 4, 5, 1]$$ → $$[5, 4, 3, 1, 2]$$→ $$[1, 3, 4, 2, 5]$$→ $$[2, 4, 3, 5, 1]$$ (C)
+$[2, 3, 4, 5, 1]$ → $[5, 4, 3, 1, 2]$→ $[1, 3, 4, 2, 5]$→ $[2, 4, 3, 5, 1]$ (C)
 
-Berikut adalah hasil eksekusi mantra BA secara berurutan pada susunan \[2, 3, 4, 5, 1]:
-
-| **Iterasi** | **Susunan Kartu** | **Analisis Siklus**                                                                                    |
-| ----------- | ----------------- | ------------------------------------------------------------------------------------------------------ |
-| Awal        | \[2, 3, 4, 5, 1]  | Kondisi awal sebelum mantra diterapkan.                                                                |
-| BA ke-1     | \[5, 4, 3, 1, 2]  | Seluruh posisi berpindah sesuai aturan.                                                                |
-| BA ke-2     | \[1, 3, 4, 2, 5]  | Posisi 2 dan 3 bertukar kembali ke angka aslinya (3 dan 4).                                            |
-| BA ke-3     | \[2, 4, 3, 5, 1]  | Titik tengah: Siklus 3 (posisi 1, 4, 5) reset ke angka awal (2, 5, 1). Posisi 2 dan 3 sedang bertukar. |
-| BA ke-4     | \[5, 3, 4, 1, 2]  | Siklus 2 (posisi 2 dan 3) reset kembali ke angka awal (3 dan 4).                                       |
-| BA ke-5     | \[1, 4, 3, 2, 5]  | Posisi kembali teracak mengikuti pola.                                                                 |
-| BA ke-6     | \[2, 3, 4, 5, 1]  | Reset penuh: Siklus 3 dan Siklus 2 bertemu pada kelipatan persekutuan terkecilnya.                     |
-
+![](/My%20Notes/Contents/attachments/image%2011.png)
 ## 9.
 
-![](<../../.gitbook/assets/image 12.png>)
+![](/My%20Notes/Contents/attachments/image%2012.png)
 
-#### Sequences:
+### Sequences:
 
 1. CPP → 7 days
 2. DS & AA → 5 days
@@ -251,33 +242,33 @@ Berikut adalah hasil eksekusi mantra BA secara berurutan pada susunan \[2, 3, 4,
 
 ## 10.
 
-![](<../../.gitbook/assets/image 13.png>)
+![](/My%20Notes/Contents/attachments/image%2013.png)
 
-&#x20;C (7 eggs, 2 golden) =  $$\frac{7!}{2!(7 - 2)!} = \frac{7!}{2! \times 5!}$$ = 21
+C(7 eggs, 2 golden) = $\frac{7!}{2!(7 - 2)!} = \frac{7!}{2! \times 5!}$ = 21
 
-$$2^K, K=?$$
+$2^K, K=?$
 
-$$2^K \space \ge 21, K=5$$
+K $\ge 21$ = $K^5$
 
 Jadi 5 kali percobaan.
 
 ## 11 -13.
 
-![](<../../.gitbook/assets/image 14.png>)
+![](/My%20Notes/Contents/attachments/image%2014.png)
 
-![](<../../.gitbook/assets/image 15.png>)
+![](/My%20Notes/Contents/attachments/image%2015.png)
 
-### 11
+### Number 11
 
 235416
 
-### 12
+### Number 12
 
 **BBBBBCCCBCCBBCBCCCS**
 
-### 13
+### Number 13
 
-Let’s check them one by one for N=6:
+Let’s check them one by one for $N=6$:
 
 A. “453216”:
 
@@ -325,37 +316,35 @@ In 1, out 1, in 2, out 2, etc.
 
 Possible.
 
-## 14-16.
+## 14.
 
-![](<../../.gitbook/assets/image 16.png>)
+![](/My%20Notes/Contents/attachments/image%2016.png)
 
-### 14
-
-![](<../../.gitbook/assets/image 17.png>)
+![](/My%20Notes/Contents/attachments/image%2017.png)
 
 Total = 60 routes.
 
-### 15
+## 15-16.
 
-![](<../../.gitbook/assets/image 19.png>)
+![](/My%20Notes/Contents/attachments/image%2018.png)
 
-![](<../../.gitbook/assets/image 18.png>)
+### 15.
+
+![](/My%20Notes/Contents/attachments/image%2019.png)
 
 Total = 114 routes.
 
-### 16
+### 16.
 
-![](<../../.gitbook/assets/image 20.png>)
+![](/My%20Notes/Contents/attachments/image%2020.png)
 
 Total = 78 routes.
 
-## 17-19.
+## 17.
 
-![](<../../.gitbook/assets/image 21.png>)
+![](/My%20Notes/Contents/attachments/image%2021.png)
 
-### 17
-
-**Penjelasan:**
+#### Penjelasan:
 
 Kita punya kotak dengan ukuran sisi: **1, 1, 2, 2, 2, 3, 3, 4, 6, 8**
 
@@ -373,17 +362,17 @@ Contoh penyusunan optimal (3 rantai):
 
 Semua 10 kotak tercakup, dan hanya **3 kotak** yang terlihat dari luar.
 
-### 18
+### 18.
 
-![](<../../.gitbook/assets/image 22.png>)
+![](/My%20Notes/Contents/attachments/image%2022.png)
 
 Benar/True
 
-#### 19.
+### 19.
 
-![](<../../.gitbook/assets/image 23.png>)
+![](/My%20Notes/Contents/attachments/image%2023.png)
 
-**Penjelasan Singkat:**
+#### Penjelasan Singkat:
 
 Pada masalah ini, kotak dengan **ukuran yang sama tidak bisa** saling dimasukkan (harus strictly lebih kecil untuk masuk ke yang lebih besar).
 
@@ -404,9 +393,13 @@ Jadi, walaupun total ada 70 kotak, jumlah kotak yang terlihat dari luar **paling
 
 ## 20-22.
 
-![](<../../.gitbook/assets/image 24.png>)
+![](/My%20Notes/Contents/attachments/image%2024.png)
 
+#### Pemodelan Umum
 
+## Soal 20-22: Kartu Huruf Ajaib
+
+### Memahami Masalah
 
 Pak Dengklek punya **26 kartu** berisi huruf A-Z (kartu ke-i berisi huruf ke-i).
 
@@ -420,7 +413,7 @@ N→M, O→P, P→T, Q→P, R→Q, S→Q, T→U, U→V, V→W, W→X, X→T, Y�
 
 ***
 
-### 20
+### Soal 20 — Kartu ke-10 setelah 33 sentikan
 
 Kartu ke-10 awalnya berisi huruf **J**.
 
@@ -441,11 +434,11 @@ Setelah langkah ke-3, masuk **siklus F→H→I→F** (panjang 3).
 Sisa sentikan setelah langkah ke-2: 33 - 2 = 31 langkah dalam siklus F→H→I\
 31 mod 3 = **1** → F→**H**
 
-**Jawaban Soal 20: H**
+#### Jawaban Soal 20: **H**
 
 ***
 
-### 21
+### Soal 21 — Berapa huruf berbeda setelah 3333 sentikan?
 
 Setelah banyak sentikan, setiap huruf akan masuk ke **siklus tertentu**. Kita cari ke mana setiap huruf akhirnya bermuara:
 
@@ -492,81 +485,53 @@ Setelah 3333 langkah yang sangat banyak, huruf-huruf hanya bisa berada di dalam 
 
 Total = 2 + 3 + 3 + 5 = **13 huruf berbeda**
 
-**Jawaban Soal 21: 13**
+#### Jawaban Soal 21: **13**
 
 ***
 
-### 22
+### Soal 22 — Huruf paling banyak muncul setelah 333333 sentikan?
 
-Untuk menjawab soal nomor 22, kita perlu menganalisis pola perubahan karakter pada setiap langkah (jentikan jari). Mari kita definisikan fungsi transformasi $$f(x)$$ sebagai huruf yang menggantikan huruf $$x$$ setelah satu jentikan.
+Dari 26 kartu, kita hitung berapa kartu yang akhirnya masuk ke tiap siklus:
 
-#### Analisis Transformasi
+| Siklus    | Anggota siklus | Huruf yang menuju siklus ini           |
+| --------- | -------------- | -------------------------------------- |
+| B↔C       | B, C           | A,B,C,D → **4 kartu**                  |
+| F↔H↔I     | F,H,I          | E,F,G,H,I,J,K → **7 kartu**            |
+| L↔N↔M     | L,N,M          | L,M,N → **3 kartu**                    |
+| T↔U↔V↔W↔X | T,U,V,W,X      | O,P,Q,R,S,T,U,V,W,X,Y,Z → **12 kartu** |
 
-Berdasarkan tabel yang diberikan, kita dapat memetakan transformasi setiap huruf:
+Setelah sangat banyak sentikan, kita lihat distribusi di siklus **T-U-V-W-X** (12 kartu):\
+12 kartu terbagi ke 5 posisi siklus → tidak merata.
 
-| **Huruf Awal** | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **H** | **I** | **J** | **K** | **L** | **M** | **N** | **O** | **P** | **Q** | **R** | **S** | **T** | **U** | **V** | **W** | **X** | **Y** | **Z** |
-| -------------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| Setelah 1x     | B     | C     | B     | C     | F     | H     | F     | I     | F     | E     | E     | N     | L     | M     | P     | T     | P     | Q     | Q     | U     | V     | W     | X     | T     | W     | V     |
+Untuk siklus F-H-I (7 kartu, panjang 3): 7/3 → ada posisi yang dapat **3 kartu**.
 
-Untuk menentukan kondisi setelah 333.333 kali, kita harus melihat siklus perubahan setiap huruf. Jika kita terus menerapkan fungsi $$ $f(x)$ $$ berulang kali, setiap huruf akan masuk ke dalam sebuah siklus atau mencapai kondisi stabil.
+Huruf **F** dalam siklus FHI mendapat kartu terbanyak → perlu dihitung posisi pastinya berdasarkan 333333 mod 3.
 
-Mari kita telusuri lintasan perubahan beberapa huruf:
+Setelah analisis lengkap, huruf yang paling banyak muncul adalah:
 
-* A → B → C → B... (Siklus: B ↔ C)
-* D → C → B → C... (Siklus: B ↔ C)
-* E → F → H → I → F... (Siklus: F → H → I → F)
-* G → F → H → I → F... (Siklus: F → H → I → F)
-* J → E → F → H → I → F... (Siklus: F → H → I → F)
-* K → E → F → H → I → F... (Siklus: F → H → I → F)
-* L → N → M → L... (Siklus: L → N → M → L)
-* O → P → T → U → V → W → X → T... (Siklus: T → U → V → W → X → T)
-* Q → P → T → U → V → W → X → T... (Siklus: T → U → V → W → X → T)
-* R → Q → P → T → U → V → W → X → T... (Siklus: T → U → V → W → X → T)
-* S → Q → P → T → U → V → W → X → T... (Siklus: T → U → V → W → X → T)
-* Y → W → X → T → U → V → W... (Siklus: T → U → V → W → X → T)
-* Z → V → W → X → T → U → V... (Siklus: T → U → V → W → X → T)
-
-#### Menentukan Posisi pada Langkah ke-333.333
-
-Kita perlu memeriksa posisi setiap huruf setelah jumlah langkah yang sangat besar:
-
-1. Siklus (B, C): Panjang 2. Karena 333.333 ganjil, maka posisi akhirnya adalah hasil dari 1 kali transformasi dari posisi awal (jika posisi sudah dalam siklus).
-2. Siklus (F, H, I): Panjang 3. Karena 333.333 habis dibagi 3, maka huruf-huruf yang masuk ke siklus ini akan kembali ke posisi asalnya dalam siklus (setelah melewati masa transisi).
-3. Siklus (L, N, M): Panjang 3. Sama seperti di atas, setelah 333.333 langkah, mereka akan berada di posisi asalnya dalam siklus.
-4. Siklus (T, U, V, W, X): Panjang 5. Kita hitung sisa pembagian 333.333 oleh 5 adalah 3. Maka, posisi akhirnya adalah hasil dari 3 kali lompatan dalam siklus tersebut.
-
-#### Kesimpulan
-
-Setelah melakukan pemetaan untuk ke-26 kartu setelah 333.333 langkah:
-
-* Huruf yang berada dalam siklus panjang 3 akan kembali ke posisi mereka di langkah ke-3 (atau kelipatan 3).
-* Huruf yang berada dalam siklus panjang 5 akan bergeser 3 kali dari posisi awalnya.
-
-Dengan menghitung distribusi akhir ke-26 kartu tersebut, frekuensi kemunculan huruf terbanyak adalah huruf F. Huruf F menjadi tujuan akhir dari transformasi banyak kartu (E, F, G, H, I, J, K) setelah jumlah langkah yang sangat besar dan konvergen.
-
-Jawaban: F
+#### Jawaban Soal 22: **F**
 
 ***
 
-### Soal 23-25.
+## Soal 23-25.
 
-![](<../../.gitbook/assets/image 25.png>)
+![](/My%20Notes/Contents/attachments/image%2025.png)
 
-#### 23.
+### 23.
 
-![](<../../.gitbook/assets/image 26.png>)
+![](/My%20Notes/Contents/attachments/image%2026.png)
 
 4 bebek
 
-#### 24.
+### 24.
 
-![](<../../.gitbook/assets/image 27.png>)
+![](/My%20Notes/Contents/attachments/image%2027.png)
 
-#### Solution for Soal 24 (X=9, Y=21, N=1000)
+### Solution for Soal 24 (X=9, Y=21, N=1000)
 
 ***
 
-**Step 1: Find gcd(9, 21)**
+#### Step 1: Find gcd(9, 21)
 
 gcd(9, 21) = 3
 
@@ -574,7 +539,7 @@ Since gcd = 3, a number P can only possibly be represented as 9a + 21b if **P is
 
 ***
 
-**Step 2: Simplify by dividing everything by 3**
+#### Step 2: Simplify by dividing everything by 3
 
 9a + 21b = 3(3a + 7b)
 
@@ -584,7 +549,7 @@ The problem reduces to: which numbers k cannot be written as 3a + 7b?
 
 ***
 
-**Step 3: Apply the Frobenius formula to (3, 7)**
+#### Step 3: Apply the Frobenius formula to (3, 7)
 
 Since gcd(3, 7) = 1, the formula applies.
 
@@ -600,7 +565,7 @@ All of these are below 1000, so all 6 count.
 
 ***
 
-**Step 4: Count numbers from 1-1000 not divisible by 3**
+#### Step 4: Count numbers from 1-1000 not divisible by 3
 
 floor(1000/3) = 333, so there are 333 multiples of 3.
 
@@ -608,24 +573,24 @@ Non-multiples of 3 from 1 to 1000: 1000 - 333 = **667**
 
 ***
 
-**Step 5: Add both groups**
+#### Step 5: Add both groups
 
 * Not divisible by 3: 667
 * Divisible by 3 but still impossible: 6
 
 **667 + 6 = 673**
 
-#### 25.
+### 25.
 
-![](<../../.gitbook/assets/image 28.png>)
+![](/My%20Notes/Contents/attachments/image%2028.png)
 
-#### Soal 25: X=3, Y=100, N=10^16
+### Soal 25: X=3, Y=100, N=10^16
 
 The statement claims that fewer than 100 ducks cannot be bathed.
 
 ***
 
-**Step 1: Find gcd(3, 100)**
+#### Step 1: Find gcd(3, 100)
 
 gcd(3, 100) = 1
 
@@ -633,7 +598,7 @@ Since gcd = 1, we can directly apply the Frobenius formula.
 
 ***
 
-**Step 2: Count non-representable numbers**
+#### Step 2: Count non-representable numbers
 
 Count of positive integers that cannot be written as 3a + 100b:
 
@@ -641,7 +606,7 @@ Count of positive integers that cannot be written as 3a + 100b:
 
 ***
 
-**Step 3: Check if all 99 values fall within N = 10^16**
+#### Step 3: Check if all 99 values fall within N = 10^16
 
 The Frobenius number (largest non-representable value) is:
 
@@ -651,21 +616,21 @@ The Frobenius number (largest non-representable value) is:
 
 ***
 
-**Step 4: Evaluate the statement**
+#### Step 4: Evaluate the statement
 
 There are exactly 99 ducks that cannot be bathed. 99 < 100, so the statement is true.
 
 ***
 
-**Answer: BENAR**
+#### Answer: **BENAR**
 
-#### Frobenius
+### Frobenius
 
-#### Frobenius Formula: Complete Explanation
+### Frobenius Formula: Complete Explanation
 
 ***
 
-**Case 1: gcd(a, b) = 1**
+#### Case 1: gcd(a, b) = 1
 
 Every positive integer is either representable as ax + by or not. The formula directly gives:
 
@@ -677,7 +642,7 @@ As long as the Frobenius number g(a,b) is less than N, the count is exactly this
 
 ***
 
-**Case 2: gcd(a, b) = d > 1**
+#### Case 2: gcd(a, b) = d > 1
 
 Two things happen:
 
@@ -687,7 +652,7 @@ Two things happen:
 
 ***
 
-**Summary of steps when gcd = d > 1**
+#### Summary of steps when gcd = d > 1
 
 **Step 1:** Count numbers from 1 to N that are not divisible by d.$N - \lfloor N/d \rfloor$\
 These all cannot be bathed.
@@ -702,7 +667,7 @@ Check that the reduced Frobenius number is less than N/d so all values are in ra
 
 ***
 
-**Side by side comparison**
+#### Side by side comparison
 
 |                          | gcd = 1                              | gcd = d > 1                                    |
 | ------------------------ | ------------------------------------ | ---------------------------------------------- |
@@ -711,11 +676,11 @@ Check that the reduced Frobenius number is less than N/d so all values are in ra
 | Count                    | (a-1)(b-1)/2                         | (N - N/d) + (a/d - 1)(b/d - 1)/2               |
 | Frobenius number         | ab - a - b                           | (a/d)(b/d) - (a/d) - (b/d), then multiply by d |
 
-### 26-28.
+## 26-28.
 
-![](<../../.gitbook/assets/image 29.png>)
+![](/My%20Notes/Contents/attachments/image%2029.png)
 
-#### 26.
+### 26.
 
 Let us evaluate each option using the derived rules:
 
@@ -729,9 +694,9 @@ Comparing the values 1, 3, 1, 7, and 1, the largest return value is 7, which com
 
 **Jawaban: D**
 
-#### 27.
+### 27.
 
-![](<../../.gitbook/assets/image 30.png>)
+![](/My%20Notes/Contents/attachments/image%2030.png)
 
 Bottom-up table (key values)
 
@@ -765,11 +730,11 @@ Therefore, the problem reduces to counting how many integers from 1 to 2025 are 
 
 **Jawaban: 1350**
 
-#### 28.
+### 28.
 
-![](<../../.gitbook/assets/image 31.png>)
+![](/My%20Notes/Contents/attachments/image%2031.png)
 
-**Fase 1**
+#### Fase 1
 
 **Pola**
 
@@ -780,9 +745,9 @@ Dari kode, kita sudah tahu:
 
 Ini adalah rekursi sederhana yang menghasilkan `TIGA(3k) = k + 1`.
 
-**Fase 2**
+#### Fase 2
 
-**1. Menghitung Jumlah dari N = 1 sampai N = 99**
+#### 1. Menghitung Jumlah dari N = 1 sampai N = 99
 
 Kita gunakan rumus deret aritmetika untuk menjumlahkan nilai dari ke-33 kelompok tersebut:\
 `Jumlah = (Suku Pertama + Suku Terakhir) * Jumlah Kelompok / 2`
@@ -793,22 +758,22 @@ Kita gunakan rumus deret aritmetika untuk menjumlahkan nilai dari ke-33 kelompok
 
 `Jumlah (1-99) = (4 + 36) * 33 / 2Jumlah (1-99) = 40 * 33 / 2Jumlah (1-99) = 20 * 33 = 660`
 
-**2. Menghitung Suku Terakhir (N = 100)**
+#### 2. Menghitung Suku Terakhir (N = 100)
 
 Suku ke-100 memiliki karakteristik `100 % 3 == 1`. Berdasarkan pola dasar yang telah ditemukan, nilai dari suku ini konstan:\
 `TIGA(100) = 1`
 
-**3. Total Keseluruhan**
+#### 3. Total Keseluruhan
 
 `Total Akhir = Jumlah (1-99) + TIGA(100) Total Akhir = 660 + 1 = 661`
 
-#### Jawaban Akhir
+### Jawaban Akhir
 
 **661**
 
-#### Deret/Baris Aritmatika dan Geometri
+### Deret/Baris Aritmatika dan Geometri
 
-#### Barisan dan Deret Aritmatika
+### Barisan dan Deret Aritmatika
 
 Barisan aritmatika adalah barisan bilangan di mana selisih antara dua suku yang berurutan selalu konstan. Selisih ini disebut dengan beda (b). Deret aritmatika adalah hasil penjumlahan dari suku-suku pada barisan aritmatika tersebut.
 
@@ -821,7 +786,7 @@ Barisan aritmatika adalah barisan bilangan di mana selisih antara dua suku yang 
   * `Ut = (a + Un) / 2`
 * **Hubungan Un dan Sn:** `Un = Sn - S(n-1)`
 
-#### Barisan dan Deret Geometri
+### Barisan dan Deret Geometri
 
 Barisan geometri adalah barisan bilangan di mana perbandingan (rasio) antara dua suku yang berurutan selalu konstan. Perbandingan ini disebut dengan rasio (r). Deret geometri adalah hasil penjumlahan dari suku-suku pada barisan geometri tersebut.
 
@@ -834,13 +799,13 @@ Barisan geometri adalah barisan bilangan di mana perbandingan (rasio) antara dua
 * **Suku Tengah (Ut):** Hanya berlaku jika banyaknya suku (n) merupakan bilangan ganjil.
   * `Ut = akar(a * Un)`
 
-**Deret Geometri Tak Hingga**
+#### Deret Geometri Tak Hingga
 
 Deret geometri tak hingga merupakan penjumlahan suku-suku geometri yang banyaknya tidak terbatas. Deret ini hanya memiliki nilai limit jumlah (konvergen) jika memenuhi syarat rasio `-1 < r < 1`.
 
 * **Jumlah Tak Hingga (S\_inf):** `S_inf = a / (1 - r)`
 
-#### Tabel Perbandingan Rumus
+### Tabel Perbandingan Rumus
 
 |                        |                                          |                                               |
 | ---------------------- | ---------------------------------------- | --------------------------------------------- |
@@ -851,11 +816,11 @@ Deret geometri tak hingga merupakan penjumlahan suku-suku geometri yang banyakny
 | **Suku Tengah (Ut)**   | `Ut = (a + Un) / 2`                      | `Ut = akar(a * Un)`                           |
 | **Sifat Khusus**       | `U2 - U1 = U3 - U2`                      | `U2 / U1 = U3 / U2`                           |
 
-### 29.
+## 29.
 
-![](<../../.gitbook/assets/image 32.png>)
+![](/My%20Notes/Contents/attachments/image%2032.png)
 
-**Memahami Objek `vector` di C++**
+#### Memahami Objek `vector` di C++
 
 `vector` adalah **array dinamis** di C++ (dari library `<vector>`) yang bisa berubah ukurannya. Operasi pentingnya:
 
@@ -866,7 +831,7 @@ Deret geometri tak hingga merupakan penjumlahan suku-suku geometri yang banyakny
 | `B.size()`       | Mengambil jumlah elemen                |
 | `B[i]`           | Mengakses elemen ke-i (indeks mulai 0) |
 
-#### Fungsi GSI
+### Fungsi GSI
 
 ```cpp
 int GSI(vector<int> B, int x, int y) {
@@ -880,9 +845,9 @@ int GSI(vector<int> B, int x, int y) {
 
 ***
 
-#### FUN A = {1, 2, 3, 4, 5}
+### FUN A = {1, 2, 3, 4, 5}
 
-**Phase 1**
+#### Phase 1
 
 ```
 N = A.size() = 5
@@ -890,7 +855,7 @@ N = A.size() = 5
 
 ***
 
-**Phase 2**
+#### Phase 2
 
 ```cpp
 B.push_back(0);  // B[0] = 0
@@ -907,11 +872,11 @@ for (int i = 0; i < N; i++) {
 | 3 | 6     | 4     | 10                      |
 | 4 | 10    | 5     | 15                      |
 
-**B = {0, 1, 3, 6, 10, 15}**
+#### B = {0, 1, 3, 6, 10, 15}
 
-#### 30.
+### 30.
 
-![](<../../.gitbook/assets/image 33.png>)
+![](/My%20Notes/Contents/attachments/image%2033.png)
 
 * B\[0] = 0
 * B\[1] = B\[0] + A\[0] = 0 + 1 = 1
@@ -940,9 +905,9 @@ Dengan demikian, isi dari `vector B` yang terbentuk adalah `{0, 1, 3, 6, 10, 15}
 
 Melalui perbandingan hasil kalkulasi di atas, nilai kembalian terbesar adalah 10 yang diperoleh dari opsi pemanggilan **GSI(B, 1, 4)**. Oleh karena itu, jawaban yang tepat adalah **A**.
 
-### 31.
+## 31.
 
-![](<../../.gitbook/assets/image 34.png>)
+![](/My%20Notes/Contents/attachments/image%2034.png)
 
 The program consists of two main functions: `GSI` and `FUN`.
 
@@ -1003,23 +968,23 @@ This corresponds to the sum of the subarray from index 6 to index 11 of the orig
 
 No other combination of indices produces a higher difference.
 
-**Final Answer**
+#### Final Answer
 
 9
 
-### 32-34.
+## 32-34.
 
-![](<../../.gitbook/assets/image 35.png>)
+![](/My%20Notes/Contents/attachments/image%2035.png)
 
-**Function Breakdown**
+#### Function Breakdown
 
 Berikut adalah analisis dan penjelasan langkah demi langkah mengenai eksekusi kode program tersebut, menggunakan gaya pemaparan yang terstruktur.
 
-**Tujuan Utama Kode Program**
+#### Tujuan Utama Kode Program
 
 Secara garis besar, fungsi `DUA(string S, string T)` bertugas untuk **mencari berapa kali kebalikan (reverse) dari string** `**T**` **muncul sebagai substring di dalam string** `**S**`.
 
-**Penjelasan Logika Per Baris**
+#### Penjelasan Logika Per Baris
 
 1.  `**int N = S.length();**` **dan** `**int M = T.length();**`
 
@@ -1047,7 +1012,7 @@ Secara garis besar, fungsi `DUA(string S, string T)` bertugas untuk **mencari be
 
     Setelah perulangan dalam selesai, jika semua karakter cocok, nilai `Q` akan tetap 1, sehingga `P` akan bertambah 1. Jika ada yang tidak cocok, `Q` adalah 0, sehingga `P` tidak bertambah.
 
-**Contoh Eksekusi Langkah demi Langkah**
+#### Contoh Eksekusi Langkah demi Langkah
 
 Mari kita gunakan nilai dari **Soal 32** yang ada pada gambar sebagai contoh eksekusi:
 
@@ -1102,9 +1067,9 @@ Setelah `i` mencapai 11, perulangan luar selesai.
 
 Fungsi `return P;` akan mengembalikan angka **3**. Hal ini terbukti benar karena substring "ABC" (kebalikan dari "CBA") muncul tepat 3 kali di dalam string "ABCBAABCCBAABC" pada posisi awal indeks 0, 5, dan 11.
 
-#### 32.
+### 32.
 
-![](<../../.gitbook/assets/image 36.png>)
+![](/My%20Notes/Contents/attachments/image%2036.png)
 
 Sebagai acuan dasar:
 
@@ -1112,9 +1077,9 @@ Sebagai acuan dasar:
 * **String T:** "CBA" (Panjang $M = 3$)
 * Aturan pencocokan pada perulangan dalam (`j`): Membandingkan potongan `S` dari kiri ke kanan dengan `T` dari kanan ke kiri (yaitu mendeteksi kata **"ABC"**). Jika terjadi ketidakcocokan, status `Q` berubah dari `1` menjadi `0`.
 
-**Detail Mekanisme Operasi Per Iterasi**
+#### Detail Mekanisme Operasi Per Iterasi
 
-**Iterasi i = 0**
+#### **Iterasi i = 0**
 
 * Substring: `S[0..2]` → "ABC"
 * `j = 0`: `S[0]` ('A') == `T[2]` ('A') → Cocok.
@@ -1122,32 +1087,32 @@ Sebagai acuan dasar:
 * `j = 2`: `S[2]` ('C') == `T[0]` ('C') → Cocok.
 * **Hasil:** `Q` tetap `1`. Maka `P = 0 + 1 = 1`.
 
-**Iterasi i = 1**
+#### **Iterasi i = 1**
 
 * Substring: `S[1..3]` → "BCB"
 * `j = 0`: `S[1]` ('B') != `T[2]` ('A') → **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `1`.
 
-**Iterasi i = 2**
+#### **Iterasi i = 2**
 
 * Substring: `S[2..4]` → "CBA"
 * `j = 0`: `S[2]` ('C') != `T[2]` ('A') → **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `1`.
 
-**Iterasi i = 3**
+#### **Iterasi i = 3**
 
 * Substring: `S[3..5]` → "BAA"
 * `j = 0`: `S[3]` ('B') != `T[2]` ('A') → **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `1`.
 
-**Iterasi i = 4**
+#### **Iterasi i = 4**
 
 * Substring: `S[4..6]`→ "AAB"
 * `j = 0`: `S[4]` ('A') == `T[2]` ('A') → Cocok.
 * `j = 1`: `S[5]` ('A') != `T[1]` ('B') → **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `1`.
 
-**Iterasi i = 5**
+#### **Iterasi i = 5**
 
 * Substring: `S[5..7]` → "ABC"
 * `j = 0`: `S[5]` ('A') == `T[2]` ('A') → Cocok.
@@ -1155,38 +1120,38 @@ Sebagai acuan dasar:
 * `j = 2`: `S[7]` ('C') == `T[0]` ('C') → Cocok.
 * **Hasil:** `Q` tetap `1`. Maka `P = 1 + 1 = 2`.
 
-**Iterasi i = 6**
+#### **Iterasi i = 6**
 
 * Substring: `S[6..8]` → "BCC"
 * `j = 0`: `S[6]` ('B') != `T[2]` ('A') → **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `2`.
 
-**Iterasi i = 7**
+#### **Iterasi i = 7**
 
 * Substring: `S[7..9]` → "CCB"
 * `j = 0`: `S[7]` ('C') != `T[2]` ('A') → **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `2`.
 
-**Iterasi i = 8**
+#### **Iterasi i = 8**
 
 * Substring: `S[8..10]` → "CBA"
 * `j = 0`: `S[8]` ('C') != `T[2]` ('A') → **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `2`.
 
-**Iterasi i = 9**
+#### **Iterasi i = 9**
 
 * Substring: `S[9..11]` → "BAA"
 * `j = 0`: `S[9]` ('B') != `T[2]` ('A') → **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `2`.
 
-**Iterasi i = 10**
+#### **Iterasi i = 10**
 
 * Substring: `S[10..12]` → "AAB"
 * `j = 0`: `S[10]` ('A') == `T[2]` ('A') → Cocok.
 * `j = 1`: `S[11]` ('A') != `T[1]` ('B') → **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `2`.
 
-**Iterasi i = 11**
+#### **Iterasi i = 11**
 
 * Substring: `S[11..13]` → "ABC"
 * `j = 0`: `S[11]` ('A') == `T[2]` ('A') $\rightarrow$ Cocok.
@@ -1196,9 +1161,9 @@ Sebagai acuan dasar:
 
 Setelah indeks `i = 11` selesai diproses, kondisi perulangan luar `i <= N - M` (11 <= 11) bernilai salah pada inkremen berikutnya (`i = 12`). Program keluar dari blok perulangan dan mengeksekusi perintah `return P;` dengan membawa nilai akhir **3**.
 
-#### 33.
+### 33.
 
-![](<../../.gitbook/assets/image 37.png>)
+![](/My%20Notes/Contents/attachments/image%2037.png)
 
 Berikut adalah penelusuran (_tracing_) secara rinci untuk setiap iterasi dari `i = 0` sampai `i = 11` pada Soal 32.
 
@@ -1208,9 +1173,9 @@ Sebagai acuan dasar:
 * **String T:** "CBA" (Panjang $M = 3$)
 * Aturan pencocokan pada perulangan dalam (`j`): Membandingkan potongan `S` dari kiri ke kanan dengan `T` dari kanan ke kiri (yaitu mendeteksi kata **"ABC"**). Jika terjadi ketidakcocokan, status `Q` berubah dari `1` menjadi `0`.
 
-**Detail Mekanisme Operasi Per Iterasi**
+#### Detail Mekanisme Operasi Per Iterasi
 
-**Iterasi i = 0**
+#### **Iterasi i = 0**
 
 * Substring: `S[0..2]` → "ABC"
 * `j = 0`: `S[0]` ('A') == `T[2]` ('A') → Cocok.
@@ -1218,32 +1183,32 @@ Sebagai acuan dasar:
 * `j = 2`: `S[2]` ('C') == `T[0]` ('C') $\rightarrow$ Cocok.
 * **Hasil:** `Q` tetap `1`. Maka `P = 0 + 1 = 1`.
 
-**Iterasi i = 1**
+#### **Iterasi i = 1**
 
 * Substring: `S[1..3]` → "BCB"
 * `j = 0`: `S[1]` ('B') != `T[2]` ('A') $\rightarrow$ **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `1`.
 
-**Iterasi i = 2**
+#### **Iterasi i = 2**
 
 * Substring: `S[2..4]` → "CBA"
 * `j = 0`: `S[2]` ('C') != `T[2]` ('A') $\rightarrow$ **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `1`.
 
-**Iterasi i = 3**
+#### **Iterasi i = 3**
 
 * Substring: `S[3..5]` → "BAA"
 * `j = 0`: `S[3]` ('B') != `T[2]` ('A') $\rightarrow$ **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `1`.
 
-**Iterasi i = 4**
+#### **Iterasi i = 4**
 
 * Substring: `S[4..6]` → "AAB"
 * `j = 0`: `S[4]` ('A') == `T[2]` ('A') $\rightarrow$ Cocok.
 * `j = 1`: `S[5]` ('A') != `T[1]` ('B') $\rightarrow$ **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `1`.
 
-**Iterasi i = 5**
+#### **Iterasi i = 5**
 
 * Substring: `S[5..7]` → "ABC"
 * `j = 0`: `S[5]` ('A') == `T[2]` ('A') $\rightarrow$ Cocok.
@@ -1251,38 +1216,38 @@ Sebagai acuan dasar:
 * `j = 2`: `S[7]` ('C') == `T[0]` ('C') $\rightarrow$ Cocok.
 * **Hasil:** `Q` tetap `1`. Maka `P = 1 + 1 = 2`.
 
-**Iterasi i = 6**
+#### **Iterasi i = 6**
 
 * Substring: `S[6..8]` → "BCC"
 * `j = 0`: `S[6]` ('B') != `T[2]` ('A') $\rightarrow$ **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `2`.
 
-**Iterasi i = 7**
+#### **Iterasi i = 7**
 
 * Substring: `S[7..9]` → "CCB"
 * `j = 0`: `S[7]` ('C') != `T[2]` ('A') $\rightarrow$ **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `2`.
 
-**Iterasi i = 8**
+#### **Iterasi i = 8**
 
 * Substring: `S[8..10]` → "CBA"
 * `j = 0`: `S[8]` ('C') != `T[2]` ('A') $\rightarrow$ **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `2`.
 
-**Iterasi i = 9**
+#### **Iterasi i = 9**
 
 * Substring: `S[9..11]` → "BAA"
 * `j = 0`: `S[9]` ('B') != `T[2]` ('A') $\rightarrow$ **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `2`.
 
-**Iterasi i = 10**
+#### **Iterasi i = 10**
 
 * Substring: `S[10..12]` → "AAB"
 * `j = 0`: `S[10]` ('A') == `T[2]` ('A') → Cocok.
 * `j = 1`: `S[11]` ('A') != `T[1]` ('B') → **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `2`.
 
-**Iterasi i = 11**
+#### **Iterasi i = 11**
 
 * Substring: `S[11..13]` → "ABC"
 * `j = 0`: `S[11]` ('A') == `T[2]` ('A') → Cocok.
