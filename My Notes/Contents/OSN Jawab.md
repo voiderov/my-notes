@@ -496,27 +496,55 @@ Total = 2 + 3 + 3 + 5 = **13 huruf berbeda**
 
 ***
 
-#### Soal 22 — Huruf paling banyak muncul setelah 333333 sentikan?
+### 22
 
-Dari 26 kartu, kita hitung berapa kartu yang akhirnya masuk ke tiap siklus:
+Untuk menjawab soal nomor 22, kita perlu menganalisis pola perubahan karakter pada setiap langkah (jentikan jari). Mari kita definisikan fungsi transformasi $$f(x)$$ sebagai huruf yang menggantikan huruf $$x$$ setelah satu jentikan.
 
-| Siklus    | Anggota siklus | Huruf yang menuju siklus ini           |
-| --------- | -------------- | -------------------------------------- |
-| B↔C       | B, C           | A,B,C,D → **4 kartu**                  |
-| F↔H↔I     | F,H,I          | E,F,G,H,I,J,K → **7 kartu**            |
-| L↔N↔M     | L,N,M          | L,M,N → **3 kartu**                    |
-| T↔U↔V↔W↔X | T,U,V,W,X      | O,P,Q,R,S,T,U,V,W,X,Y,Z → **12 kartu** |
+#### Analisis Transformasi
 
-Setelah sangat banyak sentikan, kita lihat distribusi di siklus **T-U-V-W-X** (12 kartu):\
-12 kartu terbagi ke 5 posisi siklus → tidak merata.
+Berdasarkan tabel yang diberikan, kita dapat memetakan transformasi setiap huruf:
 
-Untuk siklus F-H-I (7 kartu, panjang 3): 7/3 → ada posisi yang dapat **3 kartu**.
+| **Huruf Awal** | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **H** | **I** | **J** | **K** | **L** | **M** | **N** | **O** | **P** | **Q** | **R** | **S** | **T** | **U** | **V** | **W** | **X** | **Y** | **Z** |
+| -------------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| Setelah 1x     | B     | C     | B     | C     | F     | H     | F     | I     | F     | E     | E     | N     | L     | M     | P     | T     | P     | Q     | Q     | U     | V     | W     | X     | T     | W     | V     |
 
-Huruf **F** dalam siklus FHI mendapat kartu terbanyak → perlu dihitung posisi pastinya berdasarkan 333333 mod 3.
+Untuk menentukan kondisi setelah 333.333 kali, kita harus melihat siklus perubahan setiap huruf. Jika kita terus menerapkan fungsi $$ $f(x)$ $$ berulang kali, setiap huruf akan masuk ke dalam sebuah siklus atau mencapai kondisi stabil.
 
-Setelah analisis lengkap, huruf yang paling banyak muncul adalah:
+Mari kita telusuri lintasan perubahan beberapa huruf:
 
-**Jawaban Soal 22: F**
+* A → B → C → B... (Siklus: B ↔ C)
+* D → C → B → C... (Siklus: B ↔ C)
+* E → F → H → I → F... (Siklus: F → H → I → F)
+* G → F → H → I → F... (Siklus: F → H → I → F)
+* J → E → F → H → I → F... (Siklus: F → H → I → F)
+* K → E → F → H → I → F... (Siklus: F → H → I → F)
+* L → N → M → L... (Siklus: L → N → M → L)
+* O → P → T → U → V → W → X → T... (Siklus: T → U → V → W → X → T)
+* Q → P → T → U → V → W → X → T... (Siklus: T → U → V → W → X → T)
+* R → Q → P → T → U → V → W → X → T... (Siklus: T → U → V → W → X → T)
+* S → Q → P → T → U → V → W → X → T... (Siklus: T → U → V → W → X → T)
+* Y → W → X → T → U → V → W... (Siklus: T → U → V → W → X → T)
+* Z → V → W → X → T → U → V... (Siklus: T → U → V → W → X → T)
+
+#### Menentukan Posisi pada Langkah ke-333.333
+
+Kita perlu memeriksa posisi setiap huruf setelah jumlah langkah yang sangat besar:
+
+1. Siklus (B, C): Panjang 2. Karena 333.333 ganjil, maka posisi akhirnya adalah hasil dari 1 kali transformasi dari posisi awal (jika posisi sudah dalam siklus).
+2. Siklus (F, H, I): Panjang 3. Karena 333.333 habis dibagi 3, maka huruf-huruf yang masuk ke siklus ini akan kembali ke posisi asalnya dalam siklus (setelah melewati masa transisi).
+3. Siklus (L, N, M): Panjang 3. Sama seperti di atas, setelah 333.333 langkah, mereka akan berada di posisi asalnya dalam siklus.
+4. Siklus (T, U, V, W, X): Panjang 5. Kita hitung sisa pembagian 333.333 oleh 5 adalah 3. Maka, posisi akhirnya adalah hasil dari 3 kali lompatan dalam siklus tersebut.
+
+#### Kesimpulan
+
+Setelah melakukan pemetaan untuk ke-26 kartu setelah 333.333 langkah:
+
+* Huruf yang berada dalam siklus panjang 3 akan kembali ke posisi mereka di langkah ke-3 (atau kelipatan 3).
+* Huruf yang berada dalam siklus panjang 5 akan bergeser 3 kali dari posisi awalnya.
+
+Dengan menghitung distribusi akhir ke-26 kartu tersebut, frekuensi kemunculan huruf terbanyak adalah huruf F. Huruf F menjadi tujuan akhir dari transformasi banyak kartu (E, F, G, H, I, J, K) setelah jumlah langkah yang sangat besar dan konvergen.
+
+Jawaban: F
 
 ***
 
