@@ -1217,9 +1217,9 @@ Sebagai acuan dasar:
 **Iterasi i = 11**
 
 * Substring: `S[11..13]` → "ABC"
-* `j = 0`: `S[11]` ('A') == `T[2]` ('A') $\rightarrow$ Cocok.
-* `j = 1`: `S[12]` ('B') == `T[1]` ('B') $\rightarrow$ Cocok.
-* `j = 2`: `S[13]` ('C') == `T[0]` ('C') $\rightarrow$ Cocok.
+* `j = 0`: `S[11]` ('A') == `T[2]` ('A') $$\rightarrow$$ Cocok.
+* `j = 1`: `S[12]` ('B') == `T[1]` ('B') $$\rightarrow$$ Cocok.
+* `j = 2`: `S[13]` ('C') == `T[0]` ('C') $$\rightarrow$$ Cocok.
 * **Hasil:** `Q` tetap `1`. Maka `P = 2 + 1 = 3`.
 
 Setelah indeks `i = 11` selesai diproses, kondisi perulangan luar `i <= N - M` (11 <= 11) bernilai salah pada inkremen berikutnya (`i = 12`). Program keluar dari blok perulangan dan mengeksekusi perintah `return P;` dengan membawa nilai akhir **3**.
@@ -1232,8 +1232,8 @@ Berikut adalah penelusuran (_tracing_) secara rinci untuk setiap iterasi dari `i
 
 Sebagai acuan dasar:
 
-* **String S:** "ABCBAABCCBAABC" (Panjang $N = 14$)
-* **String T:** "CBA" (Panjang $M = 3$)
+* **String S:** "ABCBAABCCBAABC" (Panjang $$N = 14$$)
+* **String T:** "CBA" (Panjang $$M = 3$$)
 * Aturan pencocokan pada perulangan dalam (`j`): Membandingkan potongan `S` dari kiri ke kanan dengan `T` dari kanan ke kiri (yaitu mendeteksi kata **"ABC"**). Jika terjadi ketidakcocokan, status `Q` berubah dari `1` menjadi `0`.
 
 **Detail Mekanisme Operasi Per Iterasi**
@@ -1249,58 +1249,58 @@ Sebagai acuan dasar:
 **Iterasi i = 1**
 
 * Substring: `S[1..3]` → "BCB"
-* `j = 0`: `S[1]` ('B') != `T[2]` ('A') $\rightarrow$ **Tidak Cocok**. `Q` berubah menjadi `0`.
+* `j = 0`: `S[1]` ('B') != `T[2]` ('A') $$\rightarrow$$ **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `1`.
 
 **Iterasi i = 2**
 
 * Substring: `S[2..4]` → "CBA"
-* `j = 0`: `S[2]` ('C') != `T[2]` ('A') $\rightarrow$ **Tidak Cocok**. `Q` berubah menjadi `0`.
+* `j = 0`: `S[2]` ('C') != `T[2]` ('A') $$\rightarrow$$ **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `1`.
 
 **Iterasi i = 3**
 
 * Substring: `S[3..5]` → "BAA"
-* `j = 0`: `S[3]` ('B') != `T[2]` ('A') $\rightarrow$ **Tidak Cocok**. `Q` berubah menjadi `0`.
+* `j = 0`: `S[3]` ('B') != `T[2]` ('A') $$\rightarrow$$ **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `1`.
 
 **Iterasi i = 4**
 
 * Substring: `S[4..6]` → "AAB"
-* `j = 0`: `S[4]` ('A') == `T[2]` ('A') $\rightarrow$ Cocok.
-* `j = 1`: `S[5]` ('A') != `T[1]` ('B') $\rightarrow$ **Tidak Cocok**. `Q` berubah menjadi `0`.
+* `j = 0`: `S[4]` ('A') == `T[2]` ('A') $$\rightarrow$$ Cocok.
+* `j = 1`: `S[5]` ('A') != `T[1]` ('B') $$\rightarrow$$ **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `1`.
 
 **Iterasi i = 5**
 
 * Substring: `S[5..7]` → "ABC"
-* `j = 0`: `S[5]` ('A') == `T[2]` ('A') $\rightarrow$ Cocok.
-* `j = 1`: `S[6]` ('B') == `T[1]` ('B') $\rightarrow$ Cocok.
-* `j = 2`: `S[7]` ('C') == `T[0]` ('C') $\rightarrow$ Cocok.
+* `j = 0`: `S[5]` ('A') == `T[2]` ('A') $$\rightarrow$$ Cocok.
+* `j = 1`: `S[6]` ('B') == `T[1]` ('B') $$\rightarrow$$ Cocok.
+* `j = 2`: `S[7]` ('C') == `T[0]` ('C') $$\rightarrow$$ Cocok.
 * **Hasil:** `Q` tetap `1`. Maka `P = 1 + 1 = 2`.
 
 **Iterasi i = 6**
 
 * Substring: `S[6..8]` → "BCC"
-* `j = 0`: `S[6]` ('B') != `T[2]` ('A') $\rightarrow$ **Tidak Cocok**. `Q` berubah menjadi `0`.
+* `j = 0`: `S[6]` ('B') != `T[2]` ('A') $$\rightarrow$$ **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `2`.
 
 **Iterasi i = 7**
 
 * Substring: `S[7..9]` → "CCB"
-* `j = 0`: `S[7]` ('C') != `T[2]` ('A') $\rightarrow$ **Tidak Cocok**. `Q` berubah menjadi `0`.
+* `j = 0`: `S[7]` ('C') != `T[2]` ('A') $$\rightarrow$$ **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `2`.
 
 **Iterasi i = 8**
 
 * Substring: `S[8..10]` → "CBA"
-* `j = 0`: `S[8]` ('C') != `T[2]` ('A') $\rightarrow$ **Tidak Cocok**. `Q` berubah menjadi `0`.
+* `j = 0`: `S[8]` ('C') != `T[2]` ('A') $$\rightarrow$$ **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `2`.
 
 **Iterasi i = 9**
 
 * Substring: `S[9..11]` → "BAA"
-* `j = 0`: `S[9]` ('B') != `T[2]` ('A') $\rightarrow$ **Tidak Cocok**. `Q` berubah menjadi `0`.
+* `j = 0`: `S[9]` ('B') != `T[2]` ('A') $$\rightarrow$$ **Tidak Cocok**. `Q` berubah menjadi `0`.
 * **Hasil:** `Q = 0`. Maka `P` tetap `2`.
 
 **Iterasi i = 10**
@@ -1319,3 +1319,7 @@ Sebagai acuan dasar:
 * **Hasil:** `Q` tetap `1`. Maka `P = 2 + 1 = 3`.
 
 Setelah indeks `i = 11` selesai diproses, kondisi perulangan luar `i <= N - M` (11 <= 11) bernilai salah pada inkremen berikutnya (`i = 12`). Program keluar dari blok perulangan dan mengeksekusi perintah `return P;` dengan membawa nilai akhir **3**.
+
+### 34.
+
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
