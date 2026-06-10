@@ -1,12 +1,12 @@
 # Table of contents
 
-* [.trash](README.md)
+* [Contents](README.md)
+  * [OSN Jawab](<My Notes/Contents/OSN Jawab.md>)
+* [.trash](<README (1).md>)
   * [Welcome](<My Notes/.trash/Welcome.md>)
   * [image](<My Notes/.trash/image.md>)
   * [Trials](.trash/trials/README.md)
     * [OSNK2025](<My Notes/.trash/Trials/OSNK2025.md>)
-* [Contents](contents/README.md)
-  * [OSN Jawab](<My Notes/Contents/OSN Jawab.md>)
 * [.obsidian](.obsidian/README.md)
   * [plugins](.obsidian/plugins/README.md)
     * [obsidian-advanced-slides](.obsidian/plugins/obsidian-advanced-slides/README.md)
