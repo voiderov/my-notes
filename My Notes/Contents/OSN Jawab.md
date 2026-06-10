@@ -8,7 +8,7 @@ icon: '0'
 
 ## 1
 
-![](<../../.gitbook/assets/image (1).png>) ![](<../../.gitbook/assets/image1 (1).png>)
+![](../../.gitbook/assets/image.png) ![](../../.gitbook/assets/image1.png)
 
 ## 2
 
@@ -206,7 +206,7 @@ pos4 → pos1
 
 pos2 → pos3
 
-&#x20;pos3→ pos2
+pos3→ pos2
 
 2 cycle.
 
@@ -253,7 +253,7 @@ Berikut adalah hasil eksekusi mantra BA secara berurutan pada susunan \[2, 3, 4,
 
 ![](<../../.gitbook/assets/image 13.png>)
 
-&#x20;C (7 eggs, 2 golden) =  $$\frac{7!}{2!(7 - 2)!} = \frac{7!}{2! \times 5!}$$ = 21
+C (7 eggs, 2 golden) = $$\frac{7!}{2!(7 - 2)!} = \frac{7!}{2! \times 5!}$$ = 21
 
 $$2^K, K=?$$
 
@@ -267,15 +267,15 @@ Jadi 5 kali percobaan.
 
 ![](<../../.gitbook/assets/image 15.png>)
 
-### 11
+### 11.
 
 235416
 
-### 12
+### 12.
 
 **BBBBBCCCBCCBBCBCCCS**
 
-### 13
+### 13.
 
 Let’s check them one by one for N=6:
 
@@ -329,31 +329,37 @@ Possible.
 
 ![](<../../.gitbook/assets/image 16.png>)
 
-### 14
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-![](<../../.gitbook/assets/image 17.png>)
+### 14.
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 Total = 60 routes.
 
-### 15
+### 15.
 
 ![](<../../.gitbook/assets/image 19.png>)
 
-![](<../../.gitbook/assets/image 18.png>)
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
-Total = 114 routes.
+Total = 120 routes.
 
-### 16
+### 16.
 
 ![](<../../.gitbook/assets/image 20.png>)
 
-Total = 78 routes.
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+Total = 108 routes.
+
+
 
 ## 17-19.
 
 ![](<../../.gitbook/assets/image 21.png>)
 
-### 17
+### 17.
 
 **Penjelasan:**
 
@@ -373,13 +379,13 @@ Contoh penyusunan optimal (3 rantai):
 
 Semua 10 kotak tercakup, dan hanya **3 kotak** yang terlihat dari luar.
 
-### 18
+### 18.
 
 ![](<../../.gitbook/assets/image 22.png>)
 
 Benar/True
 
-#### 19.
+### 19.
 
 ![](<../../.gitbook/assets/image 23.png>)
 
@@ -405,8 +411,6 @@ Jadi, walaupun total ada 70 kotak, jumlah kotak yang terlihat dari luar **paling
 ## 20-22.
 
 ![](<../../.gitbook/assets/image 24.png>)
-
-
 
 Pak Dengklek punya **26 kartu** berisi huruf A-Z (kartu ke-i berisi huruf ke-i).
 
@@ -498,67 +502,91 @@ Total = 2 + 3 + 3 + 5 = **13 huruf berbeda**
 
 ### 22
 
-Untuk menjawab soal nomor 22, kita perlu menganalisis pola perubahan karakter pada setiap langkah (jentikan jari). Mari kita definisikan fungsi transformasi $$f(x)$$ sebagai huruf yang menggantikan huruf $$x$$ setelah satu jentikan.
+Pertama, perlu dipahami bahwa setiap jentikan mengubah semua kartu serentak berdasarkan tabel transformasi berikut:
 
-#### Analisis Transformasi
+A→B, B→C, C→B, D→C, E→F, F→H, G→F, H→I, I→F, J→E, K→E, L→N, M→L, N→M, O→P, P→T, Q→P, R→Q, S→Q, T→U, U→V, V→W, W→X, X→T, Y→W, Z→V
 
-Berdasarkan tabel yang diberikan, kita dapat memetakan transformasi setiap huruf:
+Dengan menelusuri rantai transformasi, ditemukan empat siklus permanen:
 
-| **Huruf Awal** | **A** | **B** | **C** | **D** | **E** | **F** | **G** | **H** | **I** | **J** | **K** | **L** | **M** | **N** | **O** | **P** | **Q** | **R** | **S** | **T** | **U** | **V** | **W** | **X** | **Y** | **Z** |
-| -------------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| Setelah 1x     | B     | C     | B     | C     | F     | H     | F     | I     | F     | E     | E     | N     | L     | M     | P     | T     | P     | Q     | Q     | U     | V     | W     | X     | T     | W     | V     |
+* **B ↔ C** (periode 2)
+* **F → H → I → F** (periode 3)
+* **L → N → M → L** (periode 3)
+* **T → U → V → W → X → T** (periode 5)
 
-Untuk menentukan kondisi setelah 333.333 kali, kita harus melihat siklus perubahan setiap huruf. Jika kita terus menerapkan fungsi $$ $f(x)$ $$ berulang kali, setiap huruf akan masuk ke dalam sebuah siklus atau mencapai kondisi stabil.
+Huruf-huruf di luar siklus akan masuk ke salah satu siklus setelah beberapa langkah transien: A dan C→D masuk ke siklus B–C; E, G, J, K masuk ke siklus F–H–I; O, P, Q, R, S, Y, Z masuk ke siklus T–U–V–W–X.
 
-Mari kita telusuri lintasan perubahan beberapa huruf:
+Untuk n = 333.333, hitung nilai modulo yang dibutuhkan:
 
-* A → B → C → B... (Siklus: B ↔ C)
-* D → C → B → C... (Siklus: B ↔ C)
-* E → F → H → I → F... (Siklus: F → H → I → F)
-* G → F → H → I → F... (Siklus: F → H → I → F)
-* J → E → F → H → I → F... (Siklus: F → H → I → F)
-* K → E → F → H → I → F... (Siklus: F → H → I → F)
-* L → N → M → L... (Siklus: L → N → M → L)
-* O → P → T → U → V → W → X → T... (Siklus: T → U → V → W → X → T)
-* Q → P → T → U → V → W → X → T... (Siklus: T → U → V → W → X → T)
-* R → Q → P → T → U → V → W → X → T... (Siklus: T → U → V → W → X → T)
-* S → Q → P → T → U → V → W → X → T... (Siklus: T → U → V → W → X → T)
-* Y → W → X → T → U → V → W... (Siklus: T → U → V → W → X → T)
-* Z → V → W → X → T → U → V... (Siklus: T → U → V → W → X → T)
+```
+333.333 mod 2 = 1
+333.333 mod 3 = 0  (karena 333.333 = 3 × 111.111)
+333.333 mod 5 = 3  (karena 333.333 = 5 × 66.666 + 3)
+```
 
-#### Menentukan Posisi pada Langkah ke-333.333
+Sekarang hitung hasil tiap kartu. Untuk kartu yang sudah berada dalam siklus, posisi akhirnya langsung dihitung dari modulo periodenya. Untuk kartu transien, kurangi dulu jumlah langkah transien dari 333.333, lalu hitung modulo.
 
-Kita perlu memeriksa posisi setiap huruf setelah jumlah langkah yang sangat besar:
+| Kartu (awal) | Langkah transien    | Sisa dalam siklus | Modulo | Hasil |
+| ------------ | ------------------- | ----------------- | ------ | ----- |
+| A            | 1 langkah → masuk B | 333.332 mod 2 = 0 | B\[0]  | **B** |
+| B            | (sudah di siklus)   | 333.333 mod 2 = 1 | C      | **C** |
+| C            | (sudah di siklus)   | 333.333 mod 2 = 1 | B      | **B** |
+| D            | 1 langkah → masuk C | 333.332 mod 2 = 0 | C      | **C** |
+| E            | 1 langkah → masuk F | 333.332 mod 3 = 2 | I      | **I** |
+| F            | (sudah di siklus)   | 333.333 mod 3 = 0 | F      | **F** |
+| G            | 1 langkah → masuk F | 333.332 mod 3 = 2 | I      | **I** |
+| H            | (sudah di siklus)   | 333.333 mod 3 = 0 | H      | **H** |
+| I            | (sudah di siklus)   | 333.333 mod 3 = 0 | I      | **I** |
+| J            | 2 langkah → masuk F | 333.331 mod 3 = 1 | H      | **H** |
+| K            | 2 langkah → masuk F | 333.331 mod 3 = 1 | H      | **H** |
+| L            | (sudah di siklus)   | 333.333 mod 3 = 0 | L      | **L** |
+| M            | (sudah di siklus)   | 333.333 mod 3 = 0 | M      | **M** |
+| N            | (sudah di siklus)   | 333.333 mod 3 = 0 | N      | **N** |
+| O            | 2 langkah → masuk T | 333.331 mod 5 = 1 | U      | **U** |
+| P            | 1 langkah → masuk T | 333.332 mod 5 = 2 | V      | **V** |
+| Q            | 2 langkah → masuk T | 333.331 mod 5 = 1 | U      | **U** |
+| R            | 3 langkah → masuk T | 333.330 mod 5 = 0 | T      | **T** |
+| S            | 3 langkah → masuk T | 333.330 mod 5 = 0 | T      | **T** |
+| T            | (sudah di siklus)   | 333.333 mod 5 = 3 | W      | **W** |
+| U            | (sudah di siklus)   | 333.333 mod 5 = 3 | X      | **X** |
+| V            | (sudah di siklus)   | 333.333 mod 5 = 3 | T      | **T** |
+| W            | (sudah di siklus)   | 333.333 mod 5 = 3 | U      | **U** |
+| X            | (sudah di siklus)   | 333.333 mod 5 = 3 | V      | **V** |
+| Y            | 1 langkah → masuk W | 333.332 mod 5 = 2 | T      | **T** |
+| Z            | 1 langkah → masuk V | 333.332 mod 5 = 2 | X      | **X** |
 
-1. Siklus (B, C): Panjang 2. Karena 333.333 ganjil, maka posisi akhirnya adalah hasil dari 1 kali transformasi dari posisi awal (jika posisi sudah dalam siklus).
-2. Siklus (F, H, I): Panjang 3. Karena 333.333 habis dibagi 3, maka huruf-huruf yang masuk ke siklus ini akan kembali ke posisi asalnya dalam siklus (setelah melewati masa transisi).
-3. Siklus (L, N, M): Panjang 3. Sama seperti di atas, setelah 333.333 langkah, mereka akan berada di posisi asalnya dalam siklus.
-4. Siklus (T, U, V, W, X): Panjang 5. Kita hitung sisa pembagian 333.333 oleh 5 adalah 3. Maka, posisi akhirnya adalah hasil dari 3 kali lompatan dalam siklus tersebut.
+Rekap jumlah kemunculan tiap huruf:
 
-#### Kesimpulan
+| Huruf         | Kartu yang memuat     | Jumlah |
+| ------------- | --------------------- | ------ |
+| **T**         | R, S, V, Y            | **4**  |
+| H             | H, J, K               | 3      |
+| I             | E, G, I               | 3      |
+| U             | O, Q, W               | 3      |
+| B             | A, C                  | 2      |
+| C             | B, D                  | 2      |
+| V             | P, X                  | 2      |
+| X             | U, Z                  | 2      |
+| F, L, M, N, W | masing-masing 1 kartu | 1      |
 
-Setelah melakukan pemetaan untuk ke-26 kartu setelah 333.333 langkah:
+Huruf **T** muncul paling banyak, yaitu pada 4 kartu (kartu yang awalnya berisi R, S, V, dan Y).
 
-* Huruf yang berada dalam siklus panjang 3 akan kembali ke posisi mereka di langkah ke-3 (atau kelipatan 3).
-* Huruf yang berada dalam siklus panjang 5 akan bergeser 3 kali dari posisi awalnya.
+**Jawaban: T**
 
-Dengan menghitung distribusi akhir ke-26 kartu tersebut, frekuensi kemunculan huruf terbanyak adalah huruf F. Huruf F menjadi tujuan akhir dari transformasi banyak kartu (E, F, G, H, I, J, K) setelah jumlah langkah yang sangat besar dan konvergen.
 
-Jawaban: F
 
 ***
 
-### Soal 23-25.
+## 23-25.
 
 ![](<../../.gitbook/assets/image 25.png>)
 
-#### 23.
+### 23.
 
 ![](<../../.gitbook/assets/image 26.png>)
 
 4 bebek
 
-#### 24.
+### 24.
 
 ![](<../../.gitbook/assets/image 27.png>)
 
@@ -615,11 +643,11 @@ Non-multiples of 3 from 1 to 1000: 1000 - 333 = **667**
 
 **667 + 6 = 673**
 
-#### 25.
+### 25.
 
 ![](<../../.gitbook/assets/image 28.png>)
 
-#### Soal 25: X=3, Y=100, N=10^16
+#### X=3, Y=100, N=10^16
 
 The statement claims that fewer than 100 ducks cannot be bathed.
 
@@ -659,9 +687,7 @@ There are exactly 99 ducks that cannot be bathed. 99 < 100, so the statement is 
 
 **Answer: BENAR**
 
-#### Frobenius
-
-#### Frobenius Formula: Complete Explanation
+### Frobenius
 
 ***
 
@@ -669,9 +695,9 @@ There are exactly 99 ducks that cannot be bathed. 99 < 100, so the statement is 
 
 Every positive integer is either representable as ax + by or not. The formula directly gives:
 
-**Largest non-representable number:**$g(a,b) = ab - a - b$
+**Largest non-representable number:** $$g(a,b) = ab - a - b$$
 
-**Count of non-representable positive integers:**$\frac{(a-1)(b-1)}{2}$
+**Count of non-representable positive integers:** $$\frac{(a-1)(b-1)}{2}$$
 
 As long as the Frobenius number g(a,b) is less than N, the count is exactly this value.
 
@@ -683,18 +709,18 @@ Two things happen:
 
 **First**, any number not divisible by d can never be represented. This is because ax + by always produces a multiple of d, so non-multiples of d are permanently impossible.
 
-**Second**, for numbers that are divisible by d, divide everything by d. Now you have new buckets a/d and b/d, and you check if k can be written as (a/d)x + (b/d)y. Since gcd(a/d, b/d) = 1, you can now apply the Case 1 formula on these reduced values.
+**Second**, for numbers that are divisible by d, divide everything by d. Now you have new buckets a/d and b/d, and you check if k can be written as (a/d)x + (b/d)y. Since gcd(a/d, b/d) = 1, you can now apply the Case 1 formula on these reduced values.7
 
 ***
 
 **Summary of steps when gcd = d > 1**
 
-**Step 1:** Count numbers from 1 to N that are not divisible by d.$N - \lfloor N/d \rfloor$\
+**Step 1:** Count numbers from 1 to N that are not divisible by d. $$N - \lfloor N/d \rfloor$$\
 These all cannot be bathed.
 
 **Step 2:** Divide buckets by d. Apply Frobenius on a/d and b/d.
 
-Count of non-representable values in reduced problem:$\frac{(a/d - 1)(b/d - 1)}{2}$
+Count of non-representable values in reduced problem: $$\frac{(a/d - 1)(b/d - 1)}{2}$$
 
 Check that the reduced Frobenius number is less than N/d so all values are in range.
 
@@ -711,11 +737,11 @@ Check that the reduced Frobenius number is less than N/d so all values are in ra
 | Count                    | (a-1)(b-1)/2                         | (N - N/d) + (a/d - 1)(b/d - 1)/2               |
 | Frobenius number         | ab - a - b                           | (a/d)(b/d) - (a/d) - (b/d), then multiply by d |
 
-### 26-28.
+## 26-28.
 
 ![](<../../.gitbook/assets/image 29.png>)
 
-#### 26.
+### 26.
 
 Let us evaluate each option using the derived rules:
 
@@ -729,7 +755,7 @@ Comparing the values 1, 3, 1, 7, and 1, the largest return value is 7, which com
 
 **Jawaban: D**
 
-#### 27.
+### 27.
 
 ![](<../../.gitbook/assets/image 30.png>)
 
@@ -765,7 +791,7 @@ Therefore, the problem reduces to counting how many integers from 1 to 2025 are 
 
 **Jawaban: 1350**
 
-#### 28.
+### 28.
 
 ![](<../../.gitbook/assets/image 31.png>)
 
@@ -791,7 +817,7 @@ Kita gunakan rumus deret aritmetika untuk menjumlahkan nilai dari ke-33 kelompok
 * Nilai kelompok terakhir (k = 33): 33 + 3 = 36
 * Jumlah kelompok: 33
 
-`Jumlah (1-99) = (4 + 36) * 33 / 2Jumlah (1-99) = 40 * 33 / 2Jumlah (1-99) = 20 * 33 = 660`
+`Jumlah (1-99) = (4 + 36) * 33 / 2Jumlah (1-99) = 40 * 33 / 2 Jumlah (1-99) = 20 * 33 = 660`
 
 **2. Menghitung Suku Terakhir (N = 100)**
 
@@ -851,6 +877,8 @@ Deret geometri tak hingga merupakan penjumlahan suku-suku geometri yang banyakny
 | **Suku Tengah (Ut)**   | `Ut = (a + Un) / 2`                      | `Ut = akar(a * Un)`                           |
 | **Sifat Khusus**       | `U2 - U1 = U3 - U2`                      | `U2 / U1 = U3 / U2`                           |
 
+## 29-31.
+
 ### 29.
 
 ![](<../../.gitbook/assets/image 32.png>)
@@ -909,7 +937,7 @@ for (int i = 0; i < N; i++) {
 
 **B = {0, 1, 3, 6, 10, 15}**
 
-#### 30.
+### 30.
 
 ![](<../../.gitbook/assets/image 33.png>)
 
@@ -1007,7 +1035,7 @@ No other combination of indices produces a higher difference.
 
 9
 
-### 32-34.
+## 32-34.
 
 ![](<../../.gitbook/assets/image 35.png>)
 
@@ -1102,7 +1130,7 @@ Setelah `i` mencapai 11, perulangan luar selesai.
 
 Fungsi `return P;` akan mengembalikan angka **3**. Hal ini terbukti benar karena substring "ABC" (kebalikan dari "CBA") muncul tepat 3 kali di dalam string "ABCBAABCCBAABC" pada posisi awal indeks 0, 5, dan 11.
 
-#### 32.
+### 32.
 
 ![](<../../.gitbook/assets/image 36.png>)
 
@@ -1196,7 +1224,7 @@ Sebagai acuan dasar:
 
 Setelah indeks `i = 11` selesai diproses, kondisi perulangan luar `i <= N - M` (11 <= 11) bernilai salah pada inkremen berikutnya (`i = 12`). Program keluar dari blok perulangan dan mengeksekusi perintah `return P;` dengan membawa nilai akhir **3**.
 
-#### 33.
+### 33.
 
 ![](<../../.gitbook/assets/image 37.png>)
 
