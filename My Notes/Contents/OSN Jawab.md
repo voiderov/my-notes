@@ -1322,4 +1322,34 @@ Setelah indeks `i = 11` selesai diproses, kondisi perulangan luar `i <= N - M` (
 
 ### 34.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+
+Pertanyaan: Jika `S = "ACCAAAACCA"`, berapakah banyak kemungkinan string T sedemikian sehingga hasil kembalian dari `DUA(S, T)` sama dengan 2?
+
+Karena setiap string `T` memiliki tepat satu bentuk kebalikan (`reverse(T)`) yang unik, pertanyaan ini sama dengan mencari banyaknya substring unik di dalam S yang muncul tepat 2 kali.
+
+Mari kita data semua substring dari `S = "ACCAAAACCA"` berdasarkan panjangnya:
+
+* Panjang 1:
+  * "A" muncul 6 kali
+  * "C" muncul 4 kali _(Tidak ada yang muncul tepat 2 kali)_
+* Panjang 2:
+  * "AC" muncul 2 kali (indeks 0 dan 6)
+  * "CC" muncul 2 kali (indeks 1 dan 7)
+  * "CA" muncul 2 kali (indeks 2 dan 8)
+  * "AA" muncul 3 kali (indeks 3, 4, dan 5)
+* Panjang 3:
+  * "ACC" muncul 2 kali (indeks 0 dan 6)
+  * "CCA" muncul 2 kali (indeks 1 dan 7)
+  * "AAA" muncul 2 kali (indeks 3 dan 4)
+  * "CAA" muncul 1 kali
+  * "AAC" muncul 1 kali
+* Panjang 4:
+  * "ACCA" muncul 2 kali (indeks 0 dan 6)
+  * Substring lainnya ("CCAA", "CAAA", "AAAA", "AAAC", "AACC") hanya muncul 1 kali.
+* Panjang 5 atau lebih:
+  * Tidak ada substring dengan panjang lebih dari atau sama dengan 5 yang dapat muncul 2 kali karena keterbatasan panjang total `S` dan tidak adanya pengulangan pola yang cocok.
+
+Daftar seluruh substring unik yang muncul tepat 2 kali adalah: "AC", "CC", "CA", "ACC", "CCA", "AAA", dan "ACCA". Terdapat 7 substring unik, sehingga ada 7 kemungkinan string `T` yang memenuhi syarat.
+
+JAWABAN: 7
