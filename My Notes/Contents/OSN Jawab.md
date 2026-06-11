@@ -775,8 +775,8 @@ Bottom-up table (key values)
 | 18  | 0       | TIGA(17) + TIGA(15) = 1 + 6        | **7**   |
 | 25  | 1       | TIGA(23) = TIGA(20) = TIGA(17) = 1 | 1       |
 
-Notice that whenever $N \pmod 3 == 1$ or $N \pmod 3 == 2$, the execution reduces directly or indirectly to a value that equals **1**.\
-Whenever $N \pmod 3 == 0$, the function sums up previous results, creating a strictly increasing sequence:\
+Notice that whenever $$N \pmod 3 == 1$$ or $$N \pmod 3 == 2$$, the execution reduces directly or indirectly to a value that equals **1**.\
+Whenever $$N \pmod 3 == 0$$, the function sums up previous results, creating a strictly increasing sequence:\
 • `TIGA(3) = 2`\
 • `TIGA(6) = 3`\
 • `TIGA(9) = 4`\
@@ -1136,8 +1136,8 @@ Fungsi `return P;` akan mengembalikan angka **3**. Hal ini terbukti benar karena
 
 Sebagai acuan dasar:
 
-* **String S:** "ABCBAABCCBAABC" (Panjang $N = 14$)
-* **String T:** "CBA" (Panjang $M = 3$)
+* **String S:** "ABCBAABCCBAABC" (Panjang $$N = 14$$)
+* **String T:** "CBA" (Panjang $$M = 3$$)
 * Aturan pencocokan pada perulangan dalam (`j`): Membandingkan potongan `S` dari kiri ke kanan dengan `T` dari kanan ke kiri (yaitu mendeteksi kata **"ABC"**). Jika terjadi ketidakcocokan, status `Q` berubah dari `1` menjadi `0`.
 
 **Detail Mekanisme Operasi Per Iterasi**
@@ -1242,8 +1242,8 @@ Sebagai acuan dasar:
 
 * Substring: `S[0..2]` → "ABC"
 * `j = 0`: `S[0]` ('A') == `T[2]` ('A') → Cocok.
-* `j = 1`: `S[1]` ('B') == `T[1]` ('B') $\rightarrow$ Cocok.
-* `j = 2`: `S[2]` ('C') == `T[0]` ('C') $\rightarrow$ Cocok.
+* `j = 1`: `S[1]` ('B') == `T[1]` ('B') $$\rightarrow$$ Cocok.
+* `j = 2`: `S[2]` ('C') == `T[0]` ('C') $$\rightarrow$$ Cocok.
 * **Hasil:** `Q` tetap `1`. Maka `P = 0 + 1 = 1`.
 
 **Iterasi i = 1**
@@ -1353,3 +1353,183 @@ Mari kita data semua substring dari `S = "ACCAAAACCA"` berdasarkan panjangnya:
 Daftar seluruh substring unik yang muncul tepat 2 kali adalah: "AC", "CC", "CA", "ACC", "CCA", "AAA", dan "ACCA". Terdapat 7 substring unik, sehingga ada 7 kemungkinan string `T` yang memenuhi syarat.
 
 JAWABAN: 7
+
+## 35-37.
+
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+
+### 35.
+
+Fungsi RAHASIA menerima vector A = {16, 5, 20, 1, 11} dengan N = 5.
+
+Untuk setiap elemen A\[i], fungsi menghitung variabel `ctr` dengan cara menelusuri seluruh array:
+
+* jika A\[j] > A\[i], maka ctr += 1
+* jika A\[j] < A\[i], maka ctr -= 1
+
+Jika setelah loop selesai nilai ctr == 0, maka A\[i] dijumlahkan ke sum.
+
+Artinya, ctr == 0 berarti jumlah elemen yang lebih besar dari A\[i] sama dengan jumlah elemen yang lebih kecil dari A\[i].
+
+***
+
+Penelusuran untuk setiap i:
+
+i=0, A\[0]=16:
+
+* j=0: 16 vs 16, tidak masuk kondisi
+* j=1: 5 < 16, ctr = -1
+* j=2: 20 > 16, ctr = 0
+* j=3: 1 < 16, ctr = -1
+* j=4: 11 < 16, ctr = -2 ctr = -2, tidak ditambahkan ke sum
+
+i=1, A\[1]=5:
+
+* j=0: 16 > 5, ctr = 1
+* j=1: 5 vs 5, tidak masuk kondisi
+* j=2: 20 > 5, ctr = 2
+* j=3: 1 < 5, ctr = 1
+* j=4: 11 > 5, ctr = 2 ctr = 2, tidak ditambahkan ke sum
+
+i=2, A\[2]=20:
+
+* j=0: 16 < 20, ctr = -1
+* j=1: 5 < 20, ctr = -2
+* j=2: 20 vs 20, tidak masuk kondisi
+* j=3: 1 < 20, ctr = -3
+* j=4: 11 < 20, ctr = -4 ctr = -4, tidak ditambahkan ke sum
+
+i=3, A\[3]=1:
+
+* j=0: 16 > 1, ctr = 1
+* j=1: 5 > 1, ctr = 2
+* j=2: 20 > 1, ctr = 3
+* j=3: 1 vs 1, tidak masuk kondisi
+* j=4: 11 > 1, ctr = 4 ctr = 4, tidak ditambahkan ke sum
+
+i=4, A\[4]=11:
+
+* j=0: 16 > 11, ctr = 1
+* j=1: 5 < 11, ctr = 0
+* j=2: 20 > 11, ctr = 1
+* j=3: 1 < 11, ctr = 0
+* j=4: 11 vs 11, tidak masuk kondisi ctr = 0, maka sum += 11
+
+***
+
+Hanya elemen 11 yang memenuhi kondisi ctr == 0. Ini masuk akal karena jika array diurutkan menjadi {1, 5, 11, 16, 20}, elemen 11 berada tepat di tengah (median) dengan 2 elemen lebih kecil dan 2 elemen lebih besar.
+
+Nilai akhir sum = **11**
+
+### 36.
+
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+
+Fungsi PETAK bekerja dalam dua tahap:
+
+1. Hitung RAHASIA untuk setiap baris, simpan ke vector C
+2. Return RAHASIA(C)
+
+***
+
+**Tahap 1: Hitung RAHASIA tiap baris**
+
+Seperti yang sudah dibuktikan di soal 35, RAHASIA mengembalikan elemen yang jumlah elemen lebih besar = jumlah elemen lebih kecil, yaitu nilai median dari tiap baris.
+
+Baris 0: {16, 5, 20, 1, 11} → sorted: {1, 5, **11**, 16, 20} → median = **11**
+
+Baris 1: {2, 17, 13, 14, 19} → sorted: {2, 13, **14**, 17, 19} Cek 14: lebih besar = {17,19} = 2, lebih kecil = {2,13} = 2, ctr = 0 → median = **14**
+
+Baris 2: {15, 7, 21, 18, 9} → sorted: {7, 9, **15**, 18, 21} Cek 15: lebih besar = {18,21} = 2, lebih kecil = {7,9} = 2, ctr = 0 → median = **15**
+
+Baris 3: {25, 6, 4, 12, 22} → sorted: {4, 6, **12**, 22, 25} Cek 12: lebih besar = {22,25} = 2, lebih kecil = {4,6} = 2, ctr = 0 → median = **12**
+
+Baris 4: {23, 3, 24, 8, 10} → sorted: {3, 8, **10**, 23, 24} Cek 10: lebih besar = {23,24} = 2, lebih kecil = {3,8} = 2, ctr = 0 → median = **10**
+
+Maka C = {11, 14, 15, 12, 10}
+
+***
+
+**Tahap 2: Hitung RAHASIA(C) = RAHASIA({11, 14, 15, 12, 10})**
+
+Sorted: {10, 11, **12**, 14, 15}
+
+Telusuri setiap elemen C:
+
+i=0, C\[0]=11: lebih besar={14,15,12}=3, lebih kecil={10}=1, ctr=1-3= -2, tidak ditambahkan
+
+i=1, C\[1]=14: lebih besar={15}=1, lebih kecil={11,12,10}=3, ctr=1-3= -2, tidak ditambahkan
+
+i=2, C\[2]=15: lebih besar={}=0, lebih kecil={11,14,12,10}=4, ctr= -4, tidak ditambahkan
+
+i=3, C\[3]=12:
+
+* j=0: 11 < 12, ctr = -1
+* j=1: 14 > 12, ctr = 0
+* j=2: 15 > 12, ctr = 1
+* j=4: 10 < 12, ctr = 0 ctr = 0, maka sum += 12
+
+i=4, C\[4]=10: lebih besar={11,14,15,12}=4, lebih kecil={}=0, ctr=4, tidak ditambahkan
+
+***
+
+RAHASIA(C) = RAHASIA({11, 14, 15, 12, 10}) = 12
+
+Jawaban: **12**
+
+### 37.
+
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+
+Berikut adalah penjelasan lengkap beserta langkah-langkah penyelesaian untuk Soal 37.
+
+### Analisis Alur Algoritma
+
+Berdasarkan fungsi-fungsi pada kode program di soal sebelumnya, kita dapat memahami mekanismenya sebagai berikut:
+
+1. Fungsi RAHASIA(A): Berfungsi untuk mencari nilai median (nilai tengah) dari sebuah vektor A. Karena setiap elemen dalam baris bersifat unik (berbeda satu sama lain), fungsi ini akan mengembalikan tepat satu nilai median di baris tersebut.
+2. Fungsi PETAK(B): Menerima matriks berukuran 5x5 (B), menghitung nilai median dari masing-masing baris, memasukkan kelima nilai median tersebut ke dalam vektor C, lalu mengembalikan nilai median dari vektor C. Algoritma ini dikenal secara teoretis sebagai metode Median dari Median (Median of Medians).
+
+### Langkah-langkah Penyelesaian
+
+Matriks B diisi oleh 25 bilangan bulat berbeda dari rentang 1 hingga 25 (sebuah permutasi dari angka 1 sampai 25). Kita diminta untuk mencari hasil kembalian paling besar yang mungkin dari fungsi PETAK(B).
+
+Misalkan nilai median dari kelima baris tersebut setelah dihitung adalah r0, r1, r2, r3, dan r4. Untuk mempermudah analisis, kita asumsikan kelima nilai median baris tersebut telah diurutkan dari yang terkecil hingga terbesar:
+
+r0 < r1 < r2 < r3 < r4
+
+Nilai akhir yang dikembalikan oleh fungsi PETAK adalah r2 (nilai tengah atau median dari kumpulan median tersebut). Kita harus mencari nilai r2 terbesar yang bisa dicapai.
+
+#### 1. Menentukan Batasan Nilai r2
+
+Untuk membuat nilai r2 sebesar mungkin, kita harus mencari tahu berapa banyak elemen di dalam matriks 5x5 yang nilainya wajib lebih besar dari r2. Mari kita bedah per baris:
+
+* Pada baris tempat r2 menjadi median: Karena r2 adalah nilai tengah dari 5 elemen di barisnya, maka harus ada minimal 2 elemen di baris tersebut yang nilainya lebih besar dari r2.
+* Pada baris tempat r3 menjadi median: Karena kita tahu r3 > r2, dan r3 adalah median di barisnya sendiri, maka elemen r3 beserta 2 elemen lain yang lebih besar dari r3 pasti nilainya juga lebih besar dari r2. Jadi, ada minimal 3 elemen di baris ini yang lebih besar dari r2.
+* Pada baris tempat r4 menjadi median: Karena r4 > r3 > r2, dengan logika yang sama seperti di atas, elemen r4 beserta 2 elemen lain di barisnya pasti lebih besar dari r2. Jadi, ada minimal 3 elemen di baris ini yang lebih besar dari r2.
+
+Jika kita total, jumlah elemen di dalam matriks yang nilainya mutlak harus lebih besar dari r2 adalah minimal:
+
+2 + 3 + 3 = 8 elemen.
+
+#### 2. Menghitung Nilai Maksimum
+
+Karena angka terbesar yang tersedia di dalam matriks adalah 25, maka 8 elemen yang wajib lebih besar dari r2 tersebut akan mengambil posisi angka-angka tertinggi yang tersedia, yaitu: 18, 19, 20, 21, 22, 23, 24, dan 25.
+
+Dengan demikian, batas nilai tertinggi yang mungkin didapatkan oleh r2 adalah:
+
+25 - 8 = 17.
+
+#### 3. Contoh Konstruksi Matriks (Pembuktian)
+
+Kita dapat membuktikan nilai 17 ini dapat dicapai dengan menyusun ke-25 angka ke dalam matriks 5x5 sebagai berikut:
+
+* Baris 1: {1, 2, 3, 5, 6} -> Median = 3
+* Baris 2: {7, 8, 9, 10, 11} -> Median = 9
+* Baris 3: {12, 13, 17, 24, 25} -> Median = 17
+* Baris 4: {14, 15, 18, 22, 23} -> Median = 18
+* Baris 5: {4, 16, 19, 20, 21} -> Median = 19
+
+Kumpulan median dari setiap baris adalah {3, 9, 17, 18, 19}. Nilai median dari kelima angka tersebut adalah 17.
+
+JAWABAN: 17
