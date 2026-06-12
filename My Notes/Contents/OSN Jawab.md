@@ -8,7 +8,7 @@ icon: '0'
 
 ## 1
 
-![](../../.gitbook/assets/image.png) ![](../../.gitbook/assets/image1.png)
+![](<../../.gitbook/assets/image (3).png>) ![](../../.gitbook/assets/image1.png)
 
 ## 2
 
@@ -329,11 +329,11 @@ Possible.
 
 ![](<../../.gitbook/assets/image 16.png>)
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 14.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Total = 60 routes.
 
@@ -341,7 +341,7 @@ Total = 60 routes.
 
 ![](<../../.gitbook/assets/image 19.png>)
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Total = 120 routes.
 
@@ -1534,12 +1534,138 @@ JAWABAN: 17
 
 ## 38-40.
 
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
 ### 38.
 
+#### Memahami fungsi MERAH
 
+Fungsi `MERAH(A, B)` ini sebenarnya adalah implementasi **algoritma Euclidean untuk mencari FPB (GCD)**:
+
+* Jika `B == 0`, kembalikan `A`
+* Jika tidak, panggil `MERAH(B, A % B)`
+
+Jadi `MERAH(A, B) = FPB(A, B)`.
+
+#### Menghitung tiap pilihan
+
+**A. MERAH(24, 4)** 24 % 4 = 0 → MERAH(4, 0) = **4**
+
+**B. MERAH(24, 9)** 24 % 9 = 6 → MERAH(9, 6) 9 % 6 = 3 → MERAH(6, 3) 6 % 3 = 0 → MERAH(3, 0) = **3**
+
+**C. MERAH(24, 17)** 24 % 17 = 7 → MERAH(17, 7) 17 % 7 = 3 → MERAH(7, 3) 7 % 3 = 1 → MERAH(3, 1) 3 % 1 = 0 → MERAH(1, 0) = **1**
+
+**D. MERAH(24, 18)** 24 % 18 = 6 → MERAH(18, 6) 18 % 6 = 0 → MERAH(6, 0) = **6**
+
+**E. MERAH(24, 34)** 24 % 34 = 24 → MERAH(34, 24) 34 % 24 = 10 → MERAH(24, 10) 24 % 10 = 4 → MERAH(10, 4) 10 % 4 = 2 → MERAH(4, 2) 4 % 2 = 0 → MERAH(2, 0) = **2**
+
+#### Kesimpulan
+
+| Pilihan         | Hasil |
+| --------------- | ----- |
+| A. MERAH(24,4)  | 4     |
+| B. MERAH(24,9)  | 3     |
+| C. MERAH(24,17) | 1     |
+| D. MERAH(24,18) | 6     |
+| E. MERAH(24,34) | 2     |
+
+Nilai terbesar adalah **6**, yaitu pada **MERAH(24, 18)**.
+
+**Jawaban: D**
 
 ### 39.
 
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
+#### Memahami fungsi PUTIH dan NUSANTARA
+
+**PUTIH(A, B, C)** secara rekursif mengecek setiap nilai `c` dari `C` turun sampai 1, dan menghitung berapa kali `MERAH(A, c) == B` (ingat, `MERAH` = FPB/GCD).
+
+**NUSANTARA(A, B)** memanggil `PUTIH(A, B, A)`, artinya:
+
+> **NUSANTARA(A, B) = banyaknya nilai c dari 1 sampai A dengan FPB(A, c) = B**
+
+#### Menerapkan ke NUSANTARA(12, 3)
+
+Kita perlu menghitung berapa banyak `c` dari 1 sampai 12 yang memenuhi **FPB(12, c) = 3**.
+
+Mari hitung FPB(12, c) untuk setiap c:
+
+| c  | FPB(12, c) | = 3?   |
+| -- | ---------- | ------ |
+| 1  | 1          | tidak  |
+| 2  | 2          | tidak  |
+| 3  | **3**      | **ya** |
+| 4  | 4          | tidak  |
+| 5  | 1          | tidak  |
+| 6  | 6          | tidak  |
+| 7  | 1          | tidak  |
+| 8  | 4          | tidak  |
+| 9  | **3**      | **ya** |
+| 10 | 2          | tidak  |
+| 11 | 1          | tidak  |
+| 12 | 12         | tidak  |
+
+#### Kesimpulan
+
+Nilai `c` yang memenuhi FPB(12, c) = 3 hanya **c = 3** dan **c = 9**, total **2** buah.
+
+**Jawaban: 2**
 
 ### 40.
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+#### Pola yang sama, tapi rangenya besar
+
+Masih sama seperti sebelumnya:
+
+> **NUSANTARA(A, B) = banyaknya c dari 1 sampai A dengan FPB(A, c) = B**
+
+Untuk **NUSANTARA(2025, 135)**, kita perlu mencari banyaknya `c` dalam rentang 1–2025 dengan **FPB(2025, c) = 135**. Karena rangenya sampai 2025, kita tidak bisa mengecek satu-satu — perlu trik matematika.
+
+#### Triknya: sifat FPB
+
+FPB(2025, c) **selalu membagi c**. Jadi kalau FPB(2025, c) = 135, maka **c harus kelipatan 135**. Tulis `c = 135 × k`.
+
+Karena 2025 = 135 × 15, berlaku sifat FPB(d·a, d·b) = d × FPB(a, b):
+
+$$FPB(2025, 135k) = FPB(135 \times 15,\ 135 \times k) = 135 \times FPB(15, k)$$
+
+Kita ingin hasil ini = 135, artinya:
+
+$$FPB(15, k) = 1 \quad \text{(k harus relatif prima dengan 15)}$$
+
+**Rentang k**: karena `c = 135k` dan `1 ≤ c ≤ 2025`, maka `1 ≤ k ≤ 15`.
+
+#### Menghitung k yang relatif prima dengan 15
+
+Ini sama dengan menghitung **φ(15)** (fungsi Euler totient).
+
+| k  | FPB(15, k) | relatif prima? |
+| -- | ---------- | -------------- |
+| 1  | 1          | ✓              |
+| 2  | 1          | ✓              |
+| 3  | 3          | ✗              |
+| 4  | 1          | ✓              |
+| 5  | 5          | ✗              |
+| 6  | 3          | ✗              |
+| 7  | 1          | ✓              |
+| 8  | 1          | ✓              |
+| 9  | 3          | ✗              |
+| 10 | 5          | ✗              |
+| 11 | 1          | ✓              |
+| 12 | 3          | ✗              |
+| 13 | 1          | ✓              |
+| 14 | 1          | ✓              |
+| 15 | 15         | ✗              |
+
+Yang ✓: k = 1, 2, 4, 7, 8, 11, 13, 14 → **8 nilai**
+
+(Cocok dengan rumus: 15 = 3 × 5, jadi φ(15) = φ(3) × φ(5) = 2 × 4 = 8)
+
+#### Kesimpulan
+
+Setiap k tersebut menghasilkan c = 135k yang berbeda (135, 270, 540, 945, 1080, 1485, 1755, 1890), dan masing-masing memenuhi FPB(2025, c) = 135.
+
+**Jawaban: 8**
