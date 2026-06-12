@@ -1481,16 +1481,14 @@ Jawaban: **12**
 
 <figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
-Berikut adalah penjelasan lengkap beserta langkah-langkah penyelesaian untuk Soal 37.
-
-### Analisis Alur Algoritma
+#### Analisis Alur Algoritma
 
 Berdasarkan fungsi-fungsi pada kode program di soal sebelumnya, kita dapat memahami mekanismenya sebagai berikut:
 
 1. Fungsi RAHASIA(A): Berfungsi untuk mencari nilai median (nilai tengah) dari sebuah vektor A. Karena setiap elemen dalam baris bersifat unik (berbeda satu sama lain), fungsi ini akan mengembalikan tepat satu nilai median di baris tersebut.
 2. Fungsi PETAK(B): Menerima matriks berukuran 5x5 (B), menghitung nilai median dari masing-masing baris, memasukkan kelima nilai median tersebut ke dalam vektor C, lalu mengembalikan nilai median dari vektor C. Algoritma ini dikenal secara teoretis sebagai metode Median dari Median (Median of Medians).
 
-### Langkah-langkah Penyelesaian
+#### Langkah-langkah Penyelesaian
 
 Matriks B diisi oleh 25 bilangan bulat berbeda dari rentang 1 hingga 25 (sebuah permutasi dari angka 1 sampai 25). Kita diminta untuk mencari hasil kembalian paling besar yang mungkin dari fungsi PETAK(B).
 
@@ -1533,3 +1531,15 @@ Kita dapat membuktikan nilai 17 ini dapat dicapai dengan menyusun ke-25 angka ke
 Kumpulan median dari setiap baris adalah {3, 9, 17, 18, 19}. Nilai median dari kelima angka tersebut adalah 17.
 
 JAWABAN: 17
+
+## 38-40.
+
+### 38.
+
+
+
+### 39.
+
+
+
+### 40.
